@@ -650,6 +650,8 @@
     box-shadow: 0 10px 24px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.4);
     text-decoration: none;
   }
+  .btn-glass-row { padding: 2.5rem 1.5rem; display: flex; justify-content: flex-start; align-items: center; gap: 1.25rem; flex-wrap: nowrap; overflow-x: auto; }
+  @media (min-width: 700px) { .btn-glass-row { justify-content: center; } }
   .btn-glass--verde { background: linear-gradient(160deg, #084417 0%, #1b6521 100%); }
   .btn-glass--borgonha { background: linear-gradient(160deg, #3b1620 0%, #210d12 100%); }
   .btn-glass--marinho { background: linear-gradient(160deg, #0a1631 0%, #050d1b 100%); }
@@ -1463,12 +1465,12 @@
     <h3 class="sub-title" style="margin-top:0;">Botão (padrão — vidro fosco)</h3>
     <p style="font-size:0.85rem;">Superfície de vidro fosco (glow + blur na borda) em vez do sólido antigo. Três cores: <strong>verde</strong> (CTA principal, o de sempre), <strong>borgonha</strong> e <strong>marinho</strong> (as duas já catalogadas em Cores). O preenchimento é opaco, o botão tem a mesma aparência em fundo claro ou escuro — não é translúcido de verdade, só o brilho da borda muda.</p>
     <div style="border:1px solid var(--border); border-radius:12px; overflow:hidden;">
-      <div style="background:#0a0a0a; padding:2.5rem 1.5rem; display:flex; justify-content:center; align-items:center; gap:1.25rem; flex-wrap:wrap;">
+      <div class="btn-glass-row" style="background:#0a0a0a;">
         <a class="btn-glass btn-glass--verde" href="#" onclick="return false;">Quero Garantir Agora</a>
         <a class="btn-glass btn-glass--borgonha" href="#" onclick="return false;">Quero Garantir Agora</a>
         <a class="btn-glass btn-glass--marinho" href="#" onclick="return false;">Quero Garantir Agora</a>
       </div>
-      <div style="background:#fafafa; padding:2.5rem 1.5rem; display:flex; justify-content:center; align-items:center; gap:1.25rem; flex-wrap:wrap;">
+      <div class="btn-glass-row" style="background:#fafafa;">
         <a class="btn-glass btn-glass--verde" href="#" onclick="return false;">Quero Garantir Agora</a>
         <a class="btn-glass btn-glass--borgonha" href="#" onclick="return false;">Quero Garantir Agora</a>
         <a class="btn-glass btn-glass--marinho" href="#" onclick="return false;">Quero Garantir Agora</a>
@@ -1784,6 +1786,22 @@
       <div class="category-toggle__body">
 
     <p style="font-size:0.85rem;">Selo de cera fosca (gerado via IA, PB, sem dourado/estrelas) + título + texto de garantia. Inverte com o card: selo branco sobre card escuro, selo preto sobre card claro. Duas versões de texto: <strong>Curta</strong> pra produto mais simples/barato, <strong>Completa</strong> pra ticket mais alto, reforça a decisão com mais contexto, não só o prazo.</p>
+
+    <h3 class="sub-title" style="margin-top:2rem;">Selo — 4 opções</h3>
+    <div style="border:1px solid var(--border); border-radius:12px; overflow:hidden;">
+      <div class="btn-glass-row" style="background:#fafafa;">
+        <img src="assets/selo-garantia-branco.png" style="width:100px; height:100px;">
+        <img src="assets/selo-garantia-preto.png" style="width:100px; height:100px;">
+        <img src="assets/selo-garantia-marinho.png" style="width:100px; height:100px;">
+        <img src="assets/selo-garantia-bordo.png" style="width:100px; height:100px;">
+      </div>
+      <div class="btn-glass-row" style="background:#0a0a0a;">
+        <img src="assets/selo-garantia-branco.png" style="width:100px; height:100px;">
+        <img src="assets/selo-garantia-preto.png" style="width:100px; height:100px;">
+        <img src="assets/selo-garantia-marinho.png" style="width:100px; height:100px;">
+        <img src="assets/selo-garantia-bordo.png" style="width:100px; height:100px;">
+      </div>
+    </div>
 
     <h3 class="sub-title" style="margin-top:1.5rem;">Curta (produto simples)</h3>
     <details class="model-toggle">
