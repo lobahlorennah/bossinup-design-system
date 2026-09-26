@@ -385,6 +385,37 @@
   .card3d-bg--dark .faq-title { color: #fafafa; }
   .card3d-bg--light .faq-title { color: #0a0a0a; }
 
+  /* Depoimentos — quote cards + prova social (mock de prints genéricos) */
+  .testi-kicker { text-align: center; font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; margin: 0 0 0.6rem; }
+  .card3d-bg--dark .testi-kicker { color: #a5a5a5; }
+  .card3d-bg--light .testi-kicker { color: #595959; }
+  .testi-title { text-align: center; font-family: var(--font-display); font-weight: 500; font-size: 1.8rem; margin: 0 0 0.6rem; }
+  .testi-title em { font-style: italic; }
+  .card3d-bg--dark .testi-title { color: #fafafa; }
+  .card3d-bg--light .testi-title { color: #0a0a0a; }
+  .testi-sub { text-align: center; font-size: 0.85rem; max-width: 38em; margin: 0 auto 2rem; line-height: 1.6; }
+  .card3d-bg--dark .testi-sub { color: #f2f2f2; }
+  .card3d-bg--light .testi-sub { color: #363534; }
+  .testi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-bottom: 1.5rem; }
+  @media (max-width: 700px) { .testi-grid { grid-template-columns: 1fr; } }
+  .testi-card__quote { font-style: italic; font-size: 0.88rem; line-height: 1.6; margin: 0 0 1.25rem; }
+  .testi-card__name { font-weight: 700; font-size: 0.85rem; margin: 0; }
+  .testi-card__role { font-size: 0.72rem; margin: 0.15rem 0 0; }
+  .card3d--dark .testi-card__role { color: #a5a5a5; }
+  .card3d--light .testi-card__role { color: #595959; }
+  .testi-proof-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+  @media (max-width: 700px) { .testi-proof-grid { grid-template-columns: 1fr; } }
+  .testi-proof { border-radius: 14px; padding: 1rem 1.1rem; font-size: 0.78rem; line-height: 1.5; }
+  .card3d-bg--dark .testi-proof { background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.14); color: #f2f2f2; }
+  .card3d-bg--light .testi-proof { background: rgba(10,10,10,.04); border: 1px solid rgba(10,10,10,.1); color: #363534; }
+  .testi-proof__head { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.6rem; font-weight: 700; font-size: 0.78rem; }
+  .card3d-bg--dark .testi-proof__head { color: #fafafa; }
+  .card3d-bg--light .testi-proof__head { color: #0a0a0a; }
+  .testi-proof__avatar { width: 22px; height: 22px; border-radius: 50%; flex-shrink: 0; }
+  .card3d-bg--dark .testi-proof__avatar { background: #595959; }
+  .card3d-bg--light .testi-proof__avatar { background: #a5a5a5; }
+  .testi-proof__time { display: block; font-size: 0.65rem; margin-top: 0.5rem; opacity: .6; }
+
   /* Hero demo (página de vendas — HEAD) */
   .hero-demo { display: flex; min-height: 400px; }
   .hero-demo--dark { background: linear-gradient(to right, #595959 0%, #0a0a0a 50%); color: #fafafa; }
@@ -1295,6 +1326,99 @@
               <div class="card3d__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
               <p class="card3d__title">Comunidade exclusiva de assinantes</p>
               <p class="card3d__body">Tire dúvidas, sugira temas e se conecte com quem está usando IA de verdade no trabalho.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </details>
+
+      </div>
+    </details>
+
+    <details class="category-toggle">
+      <summary>Depoimentos</summary>
+      <div class="category-toggle__body">
+
+    <p style="font-size:0.85rem;">Dois blocos: 3 cards de depoimento em destaque (citação + nome + contexto), e uma vitrine de "prova social real" — prints genéricos de mensagens/comentários, sempre em PB, sem emoji. Mesma superfície de vidro do Card 3D.</p>
+    <details class="model-toggle">
+      <summary><span class="model-thumb"><span></span><span></span></span> Modelos (claro e escuro)</summary>
+      <div class="model-toggle__body">
+        <div class="card3d-bg card3d-bg--dark">
+          <p class="testi-kicker">Prova social</p>
+          <p class="testi-title">Quem já fez, <em>recomenda</em></p>
+          <p class="testi-sub">De quem nunca tinha aberto o Claude a quem já usa todo dia — mensagens reais de quem passou pelo passo a passo.</p>
+          <div class="testi-grid">
+            <div class="card3d card3d--dark">
+              <p class="testi-card__quote">"Segui o passo a passo do zero e lancei minha primeira oferta na mesma semana."</p>
+              <p class="testi-card__name">Camila R.</p>
+              <p class="testi-card__role">aluna do Bossin'Grow</p>
+            </div>
+            <div class="card3d card3d--dark">
+              <p class="testi-card__quote">"Finalmente entendi como organizar minha rotina sem me cobrar tanto."</p>
+              <p class="testi-card__name">Juliana M.</p>
+              <p class="testi-card__role">leitora do Manual Lady Glow</p>
+            </div>
+            <div class="card3d card3d--dark">
+              <p class="testi-card__quote">"O que eu levava dias pra planejar, hoje resolvo em uma tarde."</p>
+              <p class="testi-card__name">Renata S.</p>
+              <p class="testi-card__role">assinante do Clube</p>
+            </div>
+          </div>
+          <div class="testi-proof-grid">
+            <div class="testi-proof">
+              <div class="testi-proof__head"><span class="testi-proof__avatar"></span> Grupo do Clube</div>
+              Terminei o módulo 2 hoje e já apliquei o primeiro passo. A didática é excelente, muito obrigada!
+              <span class="testi-proof__time">14:32</span>
+            </div>
+            <div class="testi-proof">
+              <div class="testi-proof__head"><span class="testi-proof__avatar"></span> Fernanda R.</div>
+              O suporte respondeu rapidinho e resolveu tudo no mesmo dia. Recomendo muito.
+              <span class="testi-proof__time">09:07</span>
+            </div>
+            <div class="testi-proof">
+              <div class="testi-proof__head"><span class="testi-proof__avatar"></span> @carla.fit</div>
+              Comprei o Manual Lady Glow essa semana, já virou rotina. Mudou minha semana de verdade.
+              <span class="testi-proof__time">21:18</span>
+            </div>
+          </div>
+        </div>
+        <div style="height:1.25rem;"></div>
+        <div class="card3d-bg card3d-bg--light">
+          <p class="testi-kicker">Prova social</p>
+          <p class="testi-title">Quem já fez, <em>recomenda</em></p>
+          <p class="testi-sub">De quem nunca tinha aberto o Claude a quem já usa todo dia — mensagens reais de quem passou pelo passo a passo.</p>
+          <div class="testi-grid">
+            <div class="card3d card3d--light">
+              <p class="testi-card__quote">"Segui o passo a passo do zero e lancei minha primeira oferta na mesma semana."</p>
+              <p class="testi-card__name">Camila R.</p>
+              <p class="testi-card__role">aluna do Bossin'Grow</p>
+            </div>
+            <div class="card3d card3d--light">
+              <p class="testi-card__quote">"Finalmente entendi como organizar minha rotina sem me cobrar tanto."</p>
+              <p class="testi-card__name">Juliana M.</p>
+              <p class="testi-card__role">leitora do Manual Lady Glow</p>
+            </div>
+            <div class="card3d card3d--light">
+              <p class="testi-card__quote">"O que eu levava dias pra planejar, hoje resolvo em uma tarde."</p>
+              <p class="testi-card__name">Renata S.</p>
+              <p class="testi-card__role">assinante do Clube</p>
+            </div>
+          </div>
+          <div class="testi-proof-grid">
+            <div class="testi-proof">
+              <div class="testi-proof__head"><span class="testi-proof__avatar"></span> Grupo do Clube</div>
+              Terminei o módulo 2 hoje e já apliquei o primeiro passo. A didática é excelente, muito obrigada!
+              <span class="testi-proof__time">14:32</span>
+            </div>
+            <div class="testi-proof">
+              <div class="testi-proof__head"><span class="testi-proof__avatar"></span> Fernanda R.</div>
+              O suporte respondeu rapidinho e resolveu tudo no mesmo dia. Recomendo muito.
+              <span class="testi-proof__time">09:07</span>
+            </div>
+            <div class="testi-proof">
+              <div class="testi-proof__head"><span class="testi-proof__avatar"></span> @carla.fit</div>
+              Comprei o Manual Lady Glow essa semana, já virou rotina. Mudou minha semana de verdade.
+              <span class="testi-proof__time">21:18</span>
             </div>
           </div>
         </div>
