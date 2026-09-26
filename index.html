@@ -661,22 +661,34 @@
   /* EM TESTE — hero com toques de vidro fosco pontuais (kicker, checklist) sobre foto de fundo inteira, sem virar card */
   .hero-glass-demo--dark { color: #fafafa; }
   .hero-glass-demo--light { color: #0a0a0a; }
-  .hero-glass-full { position: relative; min-height: 420px; display: flex; align-items: center; justify-content: center; overflow: hidden; background: linear-gradient(160deg, #4a4a4a 0%, #1a1a1a 100%); }
+  .hero-glass-full { position: relative; min-height: 420px; display: flex; align-items: center; overflow: hidden; background: linear-gradient(160deg, #4a4a4a 0%, #1a1a1a 100%); }
+  .hero-glass-full--text-right { justify-content: flex-end; }
+  .hero-glass-full--text-left { justify-content: flex-start; }
   .hero-glass-full__scrim { position: absolute; inset: 0; }
-  .hero-glass-demo--dark .hero-glass-full__scrim { background: linear-gradient(180deg, rgba(10,10,10,.25) 0%, rgba(10,10,10,.8) 100%); }
-  .hero-glass-demo--light .hero-glass-full__scrim { background: linear-gradient(180deg, rgba(250,250,250,.55) 0%, rgba(250,250,250,.92) 100%); }
-  .hero-glass-full__tag { position: absolute; bottom: 1rem; right: 1.25rem; font-size: 0.62rem; text-transform: uppercase; letter-spacing: .08em; opacity: .4; }
-  .hero-glass-full__content { position: relative; z-index: 1; max-width: 30em; padding: 3rem 2rem; display: flex; flex-direction: column; align-items: center; gap: 0.85rem; text-align: center; }
-  .hero-glass-demo__kicker { align-self: center; font-size: 0.78rem; font-weight: 600; padding: 0.5rem 1.1rem; border-radius: 999px; backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
-  .hero-glass-demo--dark .hero-glass-demo__kicker { background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.28); box-shadow: inset 0 1px 0 rgba(255,255,255,.25); }
-  .hero-glass-demo--light .hero-glass-demo__kicker { background: rgba(10,10,10,.05); border: 1px solid rgba(10,10,10,.16); box-shadow: inset 0 1px 0 rgba(255,255,255,.6); }
+  .hero-glass-demo--dark .hero-glass-full__scrim { background: linear-gradient(100deg, rgba(10,10,10,.92) 0%, rgba(10,10,10,.55) 55%, rgba(10,10,10,.2) 100%); }
+  .hero-glass-full--text-right .hero-glass-full__scrim { background: linear-gradient(260deg, rgba(10,10,10,.92) 0%, rgba(10,10,10,.55) 55%, rgba(10,10,10,.2) 100%) !important; }
+  .hero-glass-demo--light .hero-glass-full__scrim { background: linear-gradient(100deg, rgba(250,250,250,.94) 0%, rgba(250,250,250,.6) 55%, rgba(250,250,250,.25) 100%); }
+  .hero-glass-demo--light.hero-glass-full--text-right .hero-glass-full__scrim, .hero-glass-demo--light .hero-glass-full--text-right .hero-glass-full__scrim { background: linear-gradient(260deg, rgba(250,250,250,.94) 0%, rgba(250,250,250,.6) 55%, rgba(250,250,250,.25) 100%) !important; }
+  .hero-glass-full__tag { position: absolute; bottom: 1rem; right: 1.25rem; font-size: 0.62rem; text-transform: uppercase; letter-spacing: .08em; opacity: .5; }
+  .hero-glass-demo--dark .hero-glass-full__tag { color: #fafafa; }
+  .hero-glass-demo--light .hero-glass-full__tag { color: #0a0a0a; }
+  .hero-glass-full__content { position: relative; z-index: 1; width: 54%; padding: 3rem 2.25rem; display: flex; flex-direction: column; align-items: flex-start; gap: 0.85rem; text-align: left; }
+  .hero-glass-demo__kicker { font-size: 0.78rem; font-weight: 600; padding: 0.5rem 1.1rem; border-radius: 999px; backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
+  .hero-glass-demo--dark .hero-glass-demo__kicker { background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.28); box-shadow: inset 0 1px 0 rgba(255,255,255,.25); color: #fafafa; }
+  .hero-glass-demo--light .hero-glass-demo__kicker { background: rgba(10,10,10,.05); border: 1px solid rgba(10,10,10,.16); box-shadow: inset 0 1px 0 rgba(255,255,255,.6); color: #0a0a0a; }
   .hero-glass-demo__headline { font-family: var(--font-display); font-weight: 400; font-size: 2.1rem; line-height: 1.05; margin: 0; }
+  .hero-glass-demo--dark .hero-glass-demo__headline { color: #fafafa; }
+  .hero-glass-demo--light .hero-glass-demo__headline { color: #0a0a0a; }
   .hero-glass-demo__subtitle { font-size: 1.02rem; font-weight: 600; margin: 0; }
+  .hero-glass-demo--dark .hero-glass-demo__subtitle { color: #fafafa; }
+  .hero-glass-demo--light .hero-glass-demo__subtitle { color: #0a0a0a; }
   .hero-glass-demo__body { font-size: 0.9rem; line-height: 1.6; margin: 0; max-width: 30em; }
+  .hero-glass-demo--dark .hero-glass-demo__body { color: #f2f2f2; }
+  .hero-glass-demo--light .hero-glass-demo__body { color: #363534; }
   .hero-glass-demo__checklist { display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; padding: 1rem 1.5rem; font-size: 0.8rem; font-weight: 600; backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); }
   .hero-glass-demo__checklist span::before { content: "✓ "; }
-  .hero-glass-demo--dark .hero-glass-demo__checklist { background: rgba(255,255,255,.08); border-top: 1px solid rgba(255,255,255,.16); }
-  .hero-glass-demo--light .hero-glass-demo__checklist { background: rgba(10,10,10,.04); border-top: 1px solid rgba(10,10,10,.1); }
+  .hero-glass-demo--dark .hero-glass-demo__checklist { background: rgba(255,255,255,.1); border-top: 1px solid rgba(255,255,255,.2); color: #fafafa; }
+  .hero-glass-demo--light .hero-glass-demo__checklist { background: #f2f2f2; border-top: 1px solid rgba(10,10,10,.14); color: #0a0a0a; }
 
   /* EM TESTE — rodapé em superfície 3D/glass (painel flutuante, não full-bleed) */
   .footer-glass { border-radius: 24px; padding: 2.5rem 2rem 2rem; max-width: 1100px; margin: 0 auto; }
@@ -1103,45 +1115,33 @@
 
     <h3 class="sub-title">Monograma</h3>
     <div class="logo-compare">
-      <div class="card3d-bg card3d-bg--light" style="padding:1rem;">
-        <div class="card3d card3d--light" style="display:flex; align-items:center; justify-content:center; padding:1.25rem; min-height:90px;">
-          <img src="assets/logo-1.png" style="max-width:100%; height:auto; max-height:48px;">
-        </div>
+      <div style="background:#fafafa; border:1px solid var(--border); border-radius:12px; display:flex; align-items:center; justify-content:center; padding:1.25rem; min-height:90px;">
+        <img src="assets/logo-1.png" style="max-width:100%; height:auto; max-height:48px;">
       </div>
-      <div class="card3d-bg card3d-bg--dark" style="padding:1rem;">
-        <div class="card3d card3d--dark" style="display:flex; align-items:center; justify-content:center; padding:1.25rem; min-height:90px;">
-          <img src="assets/logo-2.png" style="max-width:100%; height:auto; max-height:48px;">
-        </div>
+      <div style="background:#0a0a0a; border:1px solid var(--border); border-radius:12px; display:flex; align-items:center; justify-content:center; padding:1.25rem; min-height:90px;">
+        <img src="assets/logo-2.png" style="max-width:100%; height:auto; max-height:48px;">
       </div>
     </div>
     <div class="logo-caption"><code>#0a0a0a · Preto profundo</code><code>#fafafa · Off-white</code></div>
 
     <h3 class="sub-title" style="margin-top:2rem;">Lockup — Bossin'Up Lady (BUL)</h3>
     <div class="logo-compare">
-      <div class="card3d-bg card3d-bg--light" style="padding:1rem;">
-        <div class="card3d card3d--light" style="display:flex; align-items:center; justify-content:center; padding:1.25rem; min-height:90px;">
-          <img src="assets/logo-3.png" style="max-width:100%; height:auto; max-height:56px;">
-        </div>
+      <div style="background:#fafafa; border:1px solid var(--border); border-radius:12px; display:flex; align-items:center; justify-content:center; padding:1.25rem; min-height:90px;">
+        <img src="assets/logo-3.png" style="max-width:100%; height:auto; max-height:56px;">
       </div>
-      <div class="card3d-bg card3d-bg--dark" style="padding:1rem;">
-        <div class="card3d card3d--dark" style="display:flex; align-items:center; justify-content:center; padding:1.25rem; min-height:90px;">
-          <img src="assets/logo-4.png" style="max-width:100%; height:auto; max-height:56px;">
-        </div>
+      <div style="background:#0a0a0a; border:1px solid var(--border); border-radius:12px; display:flex; align-items:center; justify-content:center; padding:1.25rem; min-height:90px;">
+        <img src="assets/logo-4.png" style="max-width:100%; height:auto; max-height:56px;">
       </div>
     </div>
     <div class="logo-caption"><code>#0a0a0a · Preto profundo</code><code>#fafafa · Off-white</code></div>
 
     <h3 class="sub-title" style="margin-top:2rem;">Lockup — Bossin'Up Digital (BUD)</h3>
     <div class="logo-compare">
-      <div class="card3d-bg card3d-bg--light" style="padding:1rem;">
-        <div class="card3d card3d--light" style="display:flex; align-items:center; justify-content:center; padding:1.25rem; min-height:90px;">
-          <img src="assets/logo-5.png" style="max-width:100%; height:auto; max-height:56px;">
-        </div>
+      <div style="background:#fafafa; border:1px solid var(--border); border-radius:12px; display:flex; align-items:center; justify-content:center; padding:1.25rem; min-height:90px;">
+        <img src="assets/logo-5.png" style="max-width:100%; height:auto; max-height:56px;">
       </div>
-      <div class="card3d-bg card3d-bg--dark" style="padding:1rem;">
-        <div class="card3d card3d--dark" style="display:flex; align-items:center; justify-content:center; padding:1.25rem; min-height:90px;">
-          <img src="assets/logo-6.png" style="max-width:100%; height:auto; max-height:56px;">
-        </div>
+      <div style="background:#0a0a0a; border:1px solid var(--border); border-radius:12px; display:flex; align-items:center; justify-content:center; padding:1.25rem; min-height:90px;">
+        <img src="assets/logo-6.png" style="max-width:100%; height:auto; max-height:56px;">
       </div>
     </div>
     <div class="logo-caption"><code>#0a0a0a · Preto profundo</code><code>#fafafa · Off-white</code></div>
@@ -1502,7 +1502,7 @@
         <div style="height:1.25rem;"></div>
 
         <div class="hero-glass-demo hero-glass-demo--light">
-          <div class="hero-glass-full">
+          <div class="hero-glass-full hero-glass-full--text-right">
             <div class="hero-glass-full__scrim"></div>
             <span class="hero-glass-full__tag">foto</span>
             <div class="hero-glass-full__content">
