@@ -448,7 +448,7 @@
   /* Garantia — selo (imagem a gerar) + título + texto */
   .guarantee { display: flex; align-items: center; gap: 1.75rem; }
   @media (max-width: 600px) { .guarantee { flex-direction: column; text-align: center; } }
-  .guarantee__badge { width: 120px; height: 120px; border-radius: 50%; flex-shrink: 0; border: 1.5px dashed var(--border-strong); display: flex; align-items: center; justify-content: center; text-align: center; font-size: 0.6rem; line-height: 1.4; color: var(--text-tertiary); padding: 0.5rem; }
+  .guarantee__badge { width: 120px; height: 120px; flex-shrink: 0; object-fit: contain; }
   .guarantee__title { font-family: var(--font-display); font-weight: 500; font-size: 1.25rem; margin: 0 0 0.5rem; }
   .guarantee__body { font-size: 0.85rem; line-height: 1.6; margin: 0; }
 
@@ -1778,7 +1778,7 @@
       <summary>Garantia</summary>
       <div class="category-toggle__body">
 
-    <p style="font-size:0.85rem;">Selo (imagem gerada à parte, PB, sem dourado/estrelas — ver Cores) + título + texto de garantia. O espaço do selo fica marcado como placeholder até a imagem final ser gerada. Duas versões de texto: <strong>Curta</strong> pra produto mais simples/barato, <strong>Completa</strong> pra ticket mais alto — reforça a decisão com mais contexto, não só o prazo.</p>
+    <p style="font-size:0.85rem;">Selo de cera fosca (gerado via IA, PB, sem dourado/estrelas) + título + texto de garantia. Inverte com o card: selo branco sobre card escuro, selo preto sobre card claro. Duas versões de texto: <strong>Curta</strong> pra produto mais simples/barato, <strong>Completa</strong> pra ticket mais alto, reforça a decisão com mais contexto, não só o prazo.</p>
 
     <h3 class="sub-title" style="margin-top:1.5rem;">Curta (produto simples)</h3>
     <details class="model-toggle">
@@ -1786,7 +1786,7 @@
       <div class="model-toggle__body">
         <div class="card3d-bg card3d-bg--dark">
           <div class="card3d card3d--dark guarantee">
-            <div class="guarantee__badge">imagem do selo<br>(gerar — 120×120)</div>
+            <img class="guarantee__badge" src="assets/selo-garantia-branco.png" alt="Selo de garantia 7 dias" style="border:none; padding:0;">
             <div>
               <p class="guarantee__title">Garantia de 7 dias</p>
               <p class="guarantee__body">Você tem 7 dias após a compra pra testar o conteúdo. Se não for pra você, é só enviar um e-mail pro suporte, e devolvemos 100% do valor, sem burocracia.</p>
@@ -1796,7 +1796,7 @@
         <div style="height:1.25rem;"></div>
         <div class="card3d-bg card3d-bg--light">
           <div class="card3d card3d--light guarantee">
-            <div class="guarantee__badge">imagem do selo<br>(gerar — 120×120)</div>
+            <img class="guarantee__badge" src="assets/selo-garantia-preto.png" alt="Selo de garantia 7 dias" style="border:none; padding:0;">
             <div>
               <p class="guarantee__title">Garantia de 7 dias</p>
               <p class="guarantee__body">Você tem 7 dias após a compra pra testar o conteúdo. Se não for pra você, é só enviar um e-mail pro suporte, e devolvemos 100% do valor, sem burocracia.</p>
@@ -1813,7 +1813,7 @@
       <div class="model-toggle__body">
         <div class="card3d-bg card3d-bg--dark">
           <div class="card3d card3d--dark guarantee">
-            <div class="guarantee__badge">imagem do selo<br>(gerar — 120×120)</div>
+            <img class="guarantee__badge" src="assets/selo-garantia-branco.png" alt="Selo de garantia 7 dias" style="border:none; padding:0;">
             <div>
               <p class="guarantee__title">Garantia incondicional de 7 dias</p>
               <p class="guarantee__body">Ao se inscrever agora, você já tem acesso a grande parte do conteúdo. Se dentro de 7 dias você sentir que não é pra você, é só avisar o suporte, e devolvemos 100% do valor investido, sem perguntas e sem burocracia.</p>
@@ -1823,7 +1823,7 @@
         <div style="height:1.25rem;"></div>
         <div class="card3d-bg card3d-bg--light">
           <div class="card3d card3d--light guarantee">
-            <div class="guarantee__badge">imagem do selo<br>(gerar — 120×120)</div>
+            <img class="guarantee__badge" src="assets/selo-garantia-preto.png" alt="Selo de garantia 7 dias" style="border:none; padding:0;">
             <div>
               <p class="guarantee__title">Garantia incondicional de 7 dias</p>
               <p class="guarantee__body">Ao se inscrever agora, você já tem acesso a grande parte do conteúdo. Se dentro de 7 dias você sentir que não é pra você, é só avisar o suporte, e devolvemos 100% do valor investido, sem perguntas e sem burocracia.</p>
