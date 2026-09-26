@@ -638,8 +638,6 @@
   .card3d--light .trust-row, .card3d--light .trust-row span { color: #595959; }
 
   /* Botão glass — 3 cores (verde/borgonha/marinho), superfície de vidro */
-  .btn-glass-row { padding: 2.5rem 1.5rem; display: flex; justify-content: flex-start; align-items: center; gap: 1.25rem; flex-wrap: nowrap; overflow-x: auto; }
-  @media (min-width: 700px) { .btn-glass-row { justify-content: center; } }
   .btn-glass {
     display: inline-block;
     font-family: 'Poppins', var(--font-body);
@@ -1466,7 +1464,7 @@
 
     <h3 class="sub-title" style="margin-top:0;">Botão (padrão — vidro fosco)</h3>
     <p style="font-size:0.85rem;">Superfície de vidro fosco (translúcido + blur) em vez do sólido — substitui o botão antigo. Três cores: <strong>verde</strong> (CTA principal, o de sempre), <strong>borgonha</strong> e <strong>marinho</strong> (as duas já catalogadas em Cores) — mesmo tom, só variando opacidade pro efeito de vidro, nada de cor nova.</p>
-    <div class="card3d-bg card3d-bg--dark btn-glass-row">
+    <div class="card3d-bg card3d-bg--dark" style="padding:2rem; display:flex; justify-content:center; gap:1.25rem; flex-wrap:wrap;">
       <a class="btn-glass btn-glass--verde" href="#" onclick="return false;">Quero Garantir Agora</a>
       <a class="btn-glass btn-glass--borgonha" href="#" onclick="return false;">Quero Garantir Agora</a>
       <a class="btn-glass btn-glass--marinho" href="#" onclick="return false;">Quero Garantir Agora</a>
@@ -1784,13 +1782,13 @@
 
     <h3 class="sub-title" style="margin-top:2rem;">Selo — 4 opções</h3>
     <div style="border:1px solid var(--border); border-radius:12px; overflow:hidden;">
-      <div class="btn-glass-row" style="background:#fafafa;">
+      <div style="background:#fafafa; padding:2rem; display:flex; justify-content:center; gap:1.25rem; flex-wrap:wrap;">
         <img src="assets/selo-garantia-branco.png" style="width:100px; height:100px;">
         <img src="assets/selo-garantia-preto.png" style="width:100px; height:100px;">
         <img src="assets/selo-garantia-marinho.png" style="width:100px; height:100px;">
         <img src="assets/selo-garantia-bordo.png" style="width:100px; height:100px;">
       </div>
-      <div class="btn-glass-row" style="background:#0a0a0a;">
+      <div style="background:#0a0a0a; padding:2rem; display:flex; justify-content:center; gap:1.25rem; flex-wrap:wrap;">
         <img src="assets/selo-garantia-branco.png" style="width:100px; height:100px;">
         <img src="assets/selo-garantia-preto.png" style="width:100px; height:100px;">
         <img src="assets/selo-garantia-marinho.png" style="width:100px; height:100px;">
