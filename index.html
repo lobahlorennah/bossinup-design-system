@@ -422,6 +422,14 @@
   .recipe-block .recipe-meta { font-size: 0.78rem; color: var(--text-tertiary); margin: 0 0 1rem; }
   .recipe-list { margin: 0; padding-left: 1.3rem; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.88rem; }
   .recipe-tag { font-size: 0.62rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.03em; color: var(--text-tertiary); background: var(--surface-2); border: 1px solid var(--border); border-radius: 999px; padding: 0.08rem 0.5rem; margin-left: 0.5rem; white-space: nowrap; }
+  .recipe-flex { display: flex; gap: 1.25rem; align-items: stretch; }
+  .recipe-thumb { width: 28px; border-radius: 8px; overflow: hidden; border: 1px solid var(--border); flex-shrink: 0; display: flex; flex-direction: column; box-shadow: 0 4px 14px rgba(0,0,0,.14); }
+  .recipe-thumb__seg { flex: 1; position: relative; }
+  .recipe-thumb__seg:not(:last-child) { border-bottom: 1px solid rgba(127,127,127,.18); }
+  .recipe-thumb__seg--dark { background: linear-gradient(160deg, #1a1a1a 0%, #0a0a0a 100%); }
+  .recipe-thumb__seg--dark::after { content: ""; position: absolute; inset: 0; background: linear-gradient(160deg, rgba(255,255,255,.16) 0%, rgba(255,255,255,0) 55%); }
+  .recipe-thumb__seg--light { background: linear-gradient(160deg, #ffffff 0%, #f2f2f2 100%); }
+  .recipe-thumb__seg--light::after { content: ""; position: absolute; inset: 0; background: linear-gradient(160deg, rgba(255,255,255,.7) 0%, rgba(255,255,255,0) 55%); }
 
   /* Página de Obrigado — hero real (acesso à área de membros) */
   .thankyou-alert { background: #c1272d; color: #fafafa; text-align: center; font-weight: 800; font-size: 0.85rem; letter-spacing: 0.02em; text-transform: uppercase; padding: 0.85rem 1rem; }
@@ -1873,62 +1881,114 @@
     <div class="recipe-block">
       <h4>Página Curta <span class="recipe-tag">3–5 dobras</span></h4>
       <p class="recipe-meta">Foco: direta ao ponto.</p>
-      <ol class="recipe-list">
-        <li><strong>Hero</strong> (promessa principal) <span class="recipe-tag">catalogado</span></li>
-        <li>Pra quem é / Benefícios <span class="recipe-tag">Card 3D</span></li>
-        <li>Preço + CTA <span class="recipe-tag">Preços</span></li>
-        <li>Garantia <span class="recipe-tag">Garantia</span></li>
-      </ol>
+      <div class="recipe-flex">
+        <div class="recipe-thumb">
+          <div class="recipe-thumb__seg recipe-thumb__seg--dark"></div>
+          <div class="recipe-thumb__seg recipe-thumb__seg--light"></div>
+          <div class="recipe-thumb__seg recipe-thumb__seg--dark"></div>
+          <div class="recipe-thumb__seg recipe-thumb__seg--light"></div>
+        </div>
+        <ol class="recipe-list">
+          <li><strong>Hero</strong> (promessa principal) <span class="recipe-tag">catalogado</span></li>
+          <li>Pra quem é / Benefícios <span class="recipe-tag">Card 3D</span></li>
+          <li>Preço + CTA <span class="recipe-tag">Preços</span></li>
+          <li>Garantia <span class="recipe-tag">Garantia</span></li>
+        </ol>
+      </div>
     </div>
 
     <div class="recipe-block">
       <h4>Página Padrão <span class="recipe-tag">6–9 dobras</span></h4>
       <p class="recipe-meta">Foco: equilibrar desejo, autoridade e quebra de objeções.</p>
-      <ol class="recipe-list">
-        <li><strong>Hero</strong> (headline + subhead + CTA) <span class="recipe-tag">catalogado</span></li>
-        <li>Problema / Agitação (conectar com a dor) <span class="recipe-tag">não catalogado</span></li>
-        <li>Apresentação da Solução <span class="recipe-tag">não catalogado</span></li>
-        <li>Conteúdo / Módulos (o que o cliente vai levar) <span class="recipe-tag">não catalogado</span></li>
-        <li>Bônus <span class="recipe-tag">não catalogado</span></li>
-        <li>Prova Social <span class="recipe-tag">Depoimentos</span></li>
-        <li>Quem Sou Eu (autoridade do criador) <span class="recipe-tag">não catalogado</span></li>
-        <li>Oferta e Preço <span class="recipe-tag">Preços</span></li>
-        <li>Garantia + Dúvidas Frequentes <span class="recipe-tag">Garantia</span> <span class="recipe-tag">FAQ</span></li>
-      </ol>
+      <div class="recipe-flex">
+        <div class="recipe-thumb">
+          <div class="recipe-thumb__seg recipe-thumb__seg--dark"></div>
+          <div class="recipe-thumb__seg recipe-thumb__seg--light"></div>
+          <div class="recipe-thumb__seg recipe-thumb__seg--dark"></div>
+          <div class="recipe-thumb__seg recipe-thumb__seg--light"></div>
+          <div class="recipe-thumb__seg recipe-thumb__seg--dark"></div>
+          <div class="recipe-thumb__seg recipe-thumb__seg--light"></div>
+          <div class="recipe-thumb__seg recipe-thumb__seg--dark"></div>
+          <div class="recipe-thumb__seg recipe-thumb__seg--light"></div>
+          <div class="recipe-thumb__seg recipe-thumb__seg--dark"></div>
+        </div>
+        <ol class="recipe-list">
+          <li><strong>Hero</strong> (headline + subhead + CTA) <span class="recipe-tag">catalogado</span></li>
+          <li>Problema / Agitação (conectar com a dor) <span class="recipe-tag">não catalogado</span></li>
+          <li>Apresentação da Solução <span class="recipe-tag">não catalogado</span></li>
+          <li>Conteúdo / Módulos (o que o cliente vai levar) <span class="recipe-tag">não catalogado</span></li>
+          <li>Bônus <span class="recipe-tag">não catalogado</span></li>
+          <li>Prova Social <span class="recipe-tag">Depoimentos</span></li>
+          <li>Quem Sou Eu (autoridade do criador) <span class="recipe-tag">não catalogado</span></li>
+          <li>Oferta e Preço <span class="recipe-tag">Preços</span></li>
+          <li>Garantia + Dúvidas Frequentes <span class="recipe-tag">Garantia</span> <span class="recipe-tag">FAQ</span></li>
+        </ol>
+      </div>
     </div>
 
     <div class="recipe-block">
       <h4>Página Longa <span class="recipe-tag">10+ dobras</span></h4>
-      <p class="recipe-meta">Foco: quebrar todas as objeções antes do CTA final. Duas variações válidas — a ordem muda conforme o que precisa de mais reforço.</p>
+      <p class="recipe-meta">Foco: quebrar todas as objeções antes do CTA final. Duas variações válidas, a ordem muda conforme o que precisa de mais reforço.</p>
       <p style="font-size:0.8rem; font-weight:700; margin:0 0 0.4rem;">Variação A (10 blocos)</p>
-      <ol class="recipe-list" style="margin-bottom:1.25rem;">
-        <li><strong>Hero</strong> (promessa) <span class="recipe-tag">catalogado</span></li>
-        <li>Depoimentos <span class="recipe-tag">catalogado</span></li>
-        <li>Dor ou dificuldade do lead <span class="recipe-tag">não catalogado</span></li>
-        <li>Entregável <span class="recipe-tag">não catalogado</span></li>
-        <li>Bônus <span class="recipe-tag">não catalogado</span></li>
-        <li>Autor <span class="recipe-tag">não catalogado</span></li>
-        <li>CTA <span class="recipe-tag">não catalogado</span></li>
-        <li>Garantia <span class="recipe-tag">Garantia</span></li>
-        <li>Dúvidas Frequentes <span class="recipe-tag">FAQ</span></li>
-        <li>WhatsApp <span class="recipe-tag">não catalogado</span></li>
-      </ol>
+      <div class="recipe-flex" style="margin-bottom:1.25rem;">
+        <div class="recipe-thumb">
+          <div class="recipe-thumb__seg recipe-thumb__seg--dark"></div>
+          <div class="recipe-thumb__seg recipe-thumb__seg--light"></div>
+          <div class="recipe-thumb__seg recipe-thumb__seg--dark"></div>
+          <div class="recipe-thumb__seg recipe-thumb__seg--light"></div>
+          <div class="recipe-thumb__seg recipe-thumb__seg--dark"></div>
+          <div class="recipe-thumb__seg recipe-thumb__seg--light"></div>
+          <div class="recipe-thumb__seg recipe-thumb__seg--dark"></div>
+          <div class="recipe-thumb__seg recipe-thumb__seg--light"></div>
+          <div class="recipe-thumb__seg recipe-thumb__seg--dark"></div>
+          <div class="recipe-thumb__seg recipe-thumb__seg--light"></div>
+        </div>
+        <ol class="recipe-list">
+          <li><strong>Hero</strong> (promessa) <span class="recipe-tag">catalogado</span></li>
+          <li>Depoimentos <span class="recipe-tag">catalogado</span></li>
+          <li>Dor ou dificuldade do lead <span class="recipe-tag">não catalogado</span></li>
+          <li>Entregável <span class="recipe-tag">não catalogado</span></li>
+          <li>Bônus <span class="recipe-tag">não catalogado</span></li>
+          <li>Autor <span class="recipe-tag">não catalogado</span></li>
+          <li>CTA <span class="recipe-tag">não catalogado</span></li>
+          <li>Garantia <span class="recipe-tag">Garantia</span></li>
+          <li>Dúvidas Frequentes <span class="recipe-tag">FAQ</span></li>
+          <li>WhatsApp <span class="recipe-tag">não catalogado</span></li>
+        </ol>
+      </div>
       <p style="font-size:0.8rem; font-weight:700; margin:0 0 0.4rem;">Variação B (13 blocos)</p>
-      <ol class="recipe-list">
-        <li><strong>Hero</strong> (promessa) <span class="recipe-tag">catalogado</span></li>
-        <li>Problema <span class="recipe-tag">não catalogado</span></li>
-        <li>Solução <span class="recipe-tag">não catalogado</span></li>
-        <li>Seu produto é diferente <span class="recipe-tag">não catalogado</span></li>
-        <li>Depoimentos <span class="recipe-tag">catalogado</span></li>
-        <li>Para quem é <span class="recipe-tag">não catalogado</span></li>
-        <li>Entregável <span class="recipe-tag">não catalogado</span></li>
-        <li>Bônus <span class="recipe-tag">não catalogado</span></li>
-        <li>CTA <span class="recipe-tag">não catalogado</span></li>
-        <li>Autor <span class="recipe-tag">não catalogado</span></li>
-        <li>Garantia <span class="recipe-tag">Garantia</span></li>
-        <li>Dúvidas Frequentes <span class="recipe-tag">FAQ</span></li>
-        <li>WhatsApp <span class="recipe-tag">não catalogado</span></li>
-      </ol>
+      <div class="recipe-flex">
+        <div class="recipe-thumb">
+          <div class="recipe-thumb__seg recipe-thumb__seg--dark"></div>
+          <div class="recipe-thumb__seg recipe-thumb__seg--light"></div>
+          <div class="recipe-thumb__seg recipe-thumb__seg--dark"></div>
+          <div class="recipe-thumb__seg recipe-thumb__seg--light"></div>
+          <div class="recipe-thumb__seg recipe-thumb__seg--dark"></div>
+          <div class="recipe-thumb__seg recipe-thumb__seg--light"></div>
+          <div class="recipe-thumb__seg recipe-thumb__seg--dark"></div>
+          <div class="recipe-thumb__seg recipe-thumb__seg--light"></div>
+          <div class="recipe-thumb__seg recipe-thumb__seg--dark"></div>
+          <div class="recipe-thumb__seg recipe-thumb__seg--light"></div>
+          <div class="recipe-thumb__seg recipe-thumb__seg--dark"></div>
+          <div class="recipe-thumb__seg recipe-thumb__seg--light"></div>
+          <div class="recipe-thumb__seg recipe-thumb__seg--dark"></div>
+        </div>
+        <ol class="recipe-list">
+          <li><strong>Hero</strong> (promessa) <span class="recipe-tag">catalogado</span></li>
+          <li>Problema <span class="recipe-tag">não catalogado</span></li>
+          <li>Solução <span class="recipe-tag">não catalogado</span></li>
+          <li>Seu produto é diferente <span class="recipe-tag">não catalogado</span></li>
+          <li>Depoimentos <span class="recipe-tag">catalogado</span></li>
+          <li>Para quem é <span class="recipe-tag">não catalogado</span></li>
+          <li>Entregável <span class="recipe-tag">não catalogado</span></li>
+          <li>Bônus <span class="recipe-tag">não catalogado</span></li>
+          <li>CTA <span class="recipe-tag">não catalogado</span></li>
+          <li>Autor <span class="recipe-tag">não catalogado</span></li>
+          <li>Garantia <span class="recipe-tag">Garantia</span></li>
+          <li>Dúvidas Frequentes <span class="recipe-tag">FAQ</span></li>
+          <li>WhatsApp <span class="recipe-tag">não catalogado</span></li>
+        </ol>
+      </div>
     </div>
 
       </div>
