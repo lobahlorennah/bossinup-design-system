@@ -416,6 +416,13 @@
   .card3d-bg--light .testi-proof__avatar { background: #a5a5a5; }
   .testi-proof__time { display: block; font-size: 0.65rem; margin-top: 0.5rem; opacity: .6; }
 
+  /* Receitas de montagem — ordem dos blocos por tamanho de página */
+  .recipe-block { border: 1px solid var(--border); border-radius: 12px; padding: 1.4rem 1.6rem; margin-bottom: 1.25rem; }
+  .recipe-block h4 { font-family: var(--font-display); font-weight: 500; font-size: 1.05rem; margin: 0 0 0.25rem; }
+  .recipe-block .recipe-meta { font-size: 0.78rem; color: var(--text-tertiary); margin: 0 0 1rem; }
+  .recipe-list { margin: 0; padding-left: 1.3rem; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.88rem; }
+  .recipe-tag { font-size: 0.62rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.03em; color: var(--text-tertiary); background: var(--surface-2); border: 1px solid var(--border); border-radius: 999px; padding: 0.08rem 0.5rem; margin-left: 0.5rem; white-space: nowrap; }
+
   /* Hero demo (página de vendas — HEAD) */
   .hero-demo { display: flex; min-height: 400px; }
   .hero-demo--dark { background: linear-gradient(to right, #595959 0%, #0a0a0a 50%); color: #fafafa; }
@@ -1769,6 +1776,76 @@
           </div>
         </div>
       </div>
+    </div>
+
+      </div>
+    </details>
+
+    <details class="category-toggle">
+      <summary>Receitas de Montagem</summary>
+      <div class="category-toggle__body">
+
+    <p style="font-size:0.85rem;">A ordem certa dos blocos pra montar uma página de vendas do zero, por tamanho — baseado no material de copy da Gabi Cervantes. Blocos marcados <span class="recipe-tag">não catalogado</span> ainda não têm componente padronizado aqui: ao montar uma página real, geram sob demanda seguindo o estilo geral (PB, vidro fosco, sem emoji), sem precisar esperar virarem padrão no design system.</p>
+
+    <div class="recipe-block">
+      <h4>Página Curta <span class="recipe-tag">3–5 dobras</span></h4>
+      <p class="recipe-meta">Foco: direta ao ponto.</p>
+      <ol class="recipe-list">
+        <li><strong>Hero</strong> (promessa principal) <span class="recipe-tag">catalogado</span></li>
+        <li>Pra quem é / Benefícios <span class="recipe-tag">Card 3D</span></li>
+        <li>Preço + CTA <span class="recipe-tag">Preços</span></li>
+        <li>Garantia <span class="recipe-tag">não catalogado</span></li>
+      </ol>
+    </div>
+
+    <div class="recipe-block">
+      <h4>Página Padrão <span class="recipe-tag">6–9 dobras</span></h4>
+      <p class="recipe-meta">Foco: equilibrar desejo, autoridade e quebra de objeções.</p>
+      <ol class="recipe-list">
+        <li><strong>Hero</strong> (headline + subhead + CTA) <span class="recipe-tag">catalogado</span></li>
+        <li>Problema / Agitação (conectar com a dor) <span class="recipe-tag">não catalogado</span></li>
+        <li>Apresentação da Solução <span class="recipe-tag">não catalogado</span></li>
+        <li>Conteúdo / Módulos (o que o cliente vai levar) <span class="recipe-tag">não catalogado</span></li>
+        <li>Bônus <span class="recipe-tag">não catalogado</span></li>
+        <li>Prova Social <span class="recipe-tag">Depoimentos</span></li>
+        <li>Quem Sou Eu (autoridade do criador) <span class="recipe-tag">não catalogado</span></li>
+        <li>Oferta e Preço <span class="recipe-tag">Preços</span></li>
+        <li>Garantia + Dúvidas Frequentes <span class="recipe-tag">FAQ</span></li>
+      </ol>
+    </div>
+
+    <div class="recipe-block">
+      <h4>Página Longa <span class="recipe-tag">10+ dobras</span></h4>
+      <p class="recipe-meta">Foco: quebrar todas as objeções antes do CTA final. Duas variações válidas — a ordem muda conforme o que precisa de mais reforço.</p>
+      <p style="font-size:0.8rem; font-weight:700; margin:0 0 0.4rem;">Variação A (10 blocos)</p>
+      <ol class="recipe-list" style="margin-bottom:1.25rem;">
+        <li><strong>Hero</strong> (promessa) <span class="recipe-tag">catalogado</span></li>
+        <li>Depoimentos <span class="recipe-tag">catalogado</span></li>
+        <li>Dor ou dificuldade do lead <span class="recipe-tag">não catalogado</span></li>
+        <li>Entregável <span class="recipe-tag">não catalogado</span></li>
+        <li>Bônus <span class="recipe-tag">não catalogado</span></li>
+        <li>Autor <span class="recipe-tag">não catalogado</span></li>
+        <li>CTA <span class="recipe-tag">não catalogado</span></li>
+        <li>Garantia <span class="recipe-tag">não catalogado</span></li>
+        <li>Dúvidas Frequentes <span class="recipe-tag">FAQ</span></li>
+        <li>WhatsApp <span class="recipe-tag">não catalogado</span></li>
+      </ol>
+      <p style="font-size:0.8rem; font-weight:700; margin:0 0 0.4rem;">Variação B (13 blocos)</p>
+      <ol class="recipe-list">
+        <li><strong>Hero</strong> (promessa) <span class="recipe-tag">catalogado</span></li>
+        <li>Problema <span class="recipe-tag">não catalogado</span></li>
+        <li>Solução <span class="recipe-tag">não catalogado</span></li>
+        <li>Seu produto é diferente <span class="recipe-tag">não catalogado</span></li>
+        <li>Depoimentos <span class="recipe-tag">catalogado</span></li>
+        <li>Para quem é <span class="recipe-tag">não catalogado</span></li>
+        <li>Entregável <span class="recipe-tag">não catalogado</span></li>
+        <li>Bônus <span class="recipe-tag">não catalogado</span></li>
+        <li>CTA <span class="recipe-tag">não catalogado</span></li>
+        <li>Autor <span class="recipe-tag">não catalogado</span></li>
+        <li>Garantia <span class="recipe-tag">não catalogado</span></li>
+        <li>Dúvidas Frequentes <span class="recipe-tag">FAQ</span></li>
+        <li>WhatsApp <span class="recipe-tag">não catalogado</span></li>
+      </ol>
     </div>
 
       </div>
