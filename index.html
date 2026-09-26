@@ -637,11 +637,7 @@
   .card3d--dark .trust-row, .card3d--dark .trust-row span { color: #a5a5a5; }
   .card3d--light .trust-row, .card3d--light .trust-row span { color: #595959; }
 
-  /* Botão glass — 3 cores (verde/borgonha/marinho), superfície de vidro */
-  .btn-glass-compare { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
-  @media (max-width: 600px) { .btn-glass-compare { grid-template-columns: 1fr; } }
-  .btn-glass-compare > div { display: flex; flex-direction: column; align-items: center; gap: 1rem; padding: 2rem 1.25rem; }
-  .card3d-bg--light .btn-glass { border: 1px solid rgba(10,10,10,.18); box-shadow: 0 10px 24px rgba(0,0,0,.18), inset 0 1px 0 rgba(255,255,255,.5); }
+  /* Botão glass — 3 cores (verde/borgonha/marinho), preenchimento opaco (nao muda com o fundo), so a borda tem o toque de vidro */
   .btn-glass {
     display: inline-block;
     font-family: 'Poppins', var(--font-body);
@@ -652,13 +648,11 @@
     border-radius: 25px;
     border: 1px solid rgba(255,255,255,.35);
     box-shadow: 0 10px 24px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.4);
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
     text-decoration: none;
   }
-  .btn-glass--verde { background: linear-gradient(160deg, rgba(12,68,15,.65) 0%, rgba(42,156,49,.65) 100%); }
-  .btn-glass--borgonha { background: linear-gradient(160deg, rgba(74,28,40,.8) 0%, rgba(74,28,40,.45) 100%); }
-  .btn-glass--marinho { background: linear-gradient(160deg, rgba(12,28,61,.8) 0%, rgba(12,28,61,.45) 100%); }
+  .btn-glass--verde { background: linear-gradient(160deg, #084417 0%, #1b6521 100%); }
+  .btn-glass--borgonha { background: linear-gradient(160deg, #3b1620 0%, #210d12 100%); }
+  .btn-glass--marinho { background: linear-gradient(160deg, #0a1631 0%, #050d1b 100%); }
 
   /* EM TESTE — rodapé em superfície 3D/glass (painel flutuante, não full-bleed) */
   .footer-glass { border-radius: 24px; padding: 2.5rem 2rem 2rem; max-width: 1100px; margin: 0 auto; }
@@ -1467,14 +1461,14 @@
       <div class="category-toggle__body">
 
     <h3 class="sub-title" style="margin-top:0;">Botão (padrão — vidro fosco)</h3>
-    <p style="font-size:0.85rem;">Superfície de vidro fosco (translúcido + blur) em vez do sólido — substitui o botão antigo. Três cores: <strong>verde</strong> (CTA principal, o de sempre), <strong>borgonha</strong> e <strong>marinho</strong> (as duas já catalogadas em Cores) — mesmo tom, só variando opacidade pro efeito de vidro, nada de cor nova.</p>
-    <div class="btn-glass-compare">
-      <div class="card3d-bg card3d-bg--dark">
+    <p style="font-size:0.85rem;">Superfície de vidro fosco (glow + blur na borda) em vez do sólido antigo. Três cores: <strong>verde</strong> (CTA principal, o de sempre), <strong>borgonha</strong> e <strong>marinho</strong> (as duas já catalogadas em Cores). O preenchimento é opaco, o botão tem a mesma aparência em fundo claro ou escuro — não é translúcido de verdade, só o brilho da borda muda.</p>
+    <div style="border:1px solid var(--border); border-radius:12px; overflow:hidden;">
+      <div style="background:#0a0a0a; padding:2.5rem 1.5rem; display:flex; justify-content:center; align-items:center; gap:1.25rem; flex-wrap:wrap;">
         <a class="btn-glass btn-glass--verde" href="#" onclick="return false;">Quero Garantir Agora</a>
         <a class="btn-glass btn-glass--borgonha" href="#" onclick="return false;">Quero Garantir Agora</a>
         <a class="btn-glass btn-glass--marinho" href="#" onclick="return false;">Quero Garantir Agora</a>
       </div>
-      <div class="card3d-bg card3d-bg--light">
+      <div style="background:#fafafa; padding:2.5rem 1.5rem; display:flex; justify-content:center; align-items:center; gap:1.25rem; flex-wrap:wrap;">
         <a class="btn-glass btn-glass--verde" href="#" onclick="return false;">Quero Garantir Agora</a>
         <a class="btn-glass btn-glass--borgonha" href="#" onclick="return false;">Quero Garantir Agora</a>
         <a class="btn-glass btn-glass--marinho" href="#" onclick="return false;">Quero Garantir Agora</a>
