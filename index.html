@@ -381,6 +381,9 @@
   .faq-item__a { padding: 0 1.35rem 1.25rem; font-size: 0.85rem; line-height: 1.6; margin: 0; }
   .faq-item--light .faq-item__a { color: #363534; }
   .faq-item--dark .faq-item__a { color: #f2f2f2; }
+  .faq-title { font-family: var(--font-display); font-weight: 500; font-size: 1.5rem; text-align: center; margin: 0 0 1.5rem; }
+  .card3d-bg--dark .faq-title { color: #fafafa; }
+  .card3d-bg--light .faq-title { color: #0a0a0a; }
 
   /* Hero demo (página de vendas — HEAD) */
   .hero-demo { display: flex; min-height: 400px; }
@@ -1464,6 +1467,7 @@
       <summary><span class="model-thumb"><span></span><span></span></span> Modelos (claro e escuro)</summary>
       <div class="model-toggle__body">
         <div class="card3d-bg card3d-bg--dark">
+          <p class="faq-title">Perguntas Frequentes</p>
           <div class="faq">
             <details class="faq-item faq-item--dark" open>
               <summary class="faq-item__q">Preciso saber programar?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="faq-item__chevron"><path d="m6 9 6 6 6-6"/></svg></summary>
@@ -1485,6 +1489,7 @@
         </div>
         <div style="height:1.25rem;"></div>
         <div class="card3d-bg card3d-bg--light">
+          <p class="faq-title">Perguntas Frequentes</p>
           <div class="faq">
             <details class="faq-item faq-item--light" open>
               <summary class="faq-item__q">Preciso saber programar?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="faq-item__chevron"><path d="m6 9 6 6 6-6"/></svg></summary>
