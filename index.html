@@ -349,6 +349,39 @@
   .category-toggle__body { padding: 1.5rem 1.1rem; }
   .category-toggle__body h3.sub-title:first-child { margin-top: 0; }
 
+  /* FAQ — accordion em vidro fosco, mesma superfície do Card 3D */
+  .faq { display: flex; flex-direction: column; gap: 0.85rem; }
+  .faq-item { border-radius: 16px; overflow: hidden; }
+  .faq-item--light {
+    background: linear-gradient(160deg, rgba(255,255,255,.75) 0%, rgba(255,255,255,.35) 100%);
+    border: 1px solid rgba(10,10,10,.14);
+    box-shadow: 0 10px 26px rgba(0,0,0,.18), inset 0 1px 0 rgba(255,255,255,.9);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    color: #0a0a0a;
+  }
+  .faq-item--dark {
+    background: linear-gradient(160deg, rgba(255,255,255,.18) 0%, rgba(255,255,255,.05) 100%);
+    border: 1px solid rgba(255,255,255,.3);
+    box-shadow: 0 8px 24px rgba(0,0,0,.5), 0 0 50px rgba(255,255,255,.1), inset 0 1px 0 rgba(255,255,255,.35);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    color: #fafafa;
+  }
+  .faq-item__q {
+    cursor: pointer !important; display: flex !important; align-items: center !important; gap: 1rem !important;
+    padding: 1.1rem 1.35rem !important; list-style: none !important; font-weight: 700 !important; font-size: 0.92rem !important;
+    text-transform: none !important; letter-spacing: normal !important; color: inherit !important; background: none !important;
+    font-family: var(--font-body) !important; border-bottom: none !important;
+  }
+  .faq-item__q::after { content: none !important; }
+  .faq-item__q::-webkit-details-marker { display: none; }
+  .faq-item__chevron { margin-left: auto; flex-shrink: 0; width: 18px; height: 18px; transition: transform 0.2s ease; }
+  .faq-item[open] .faq-item__chevron { transform: rotate(180deg); }
+  .faq-item__a { padding: 0 1.35rem 1.25rem; font-size: 0.85rem; line-height: 1.6; margin: 0; }
+  .faq-item--light .faq-item__a { color: #363534; }
+  .faq-item--dark .faq-item__a { color: #f2f2f2; }
+
   /* Hero demo (página de vendas — HEAD) */
   .hero-demo { display: flex; min-height: 400px; }
   .hero-demo--dark { background: linear-gradient(to right, #595959 0%, #0a0a0a 50%); color: #fafafa; }
@@ -1415,6 +1448,61 @@
             </div>
           </div>
           <div class="trust-row" style="color:#595959;"><span>7 dias de garantia incondicional</span><span>Cartão de crédito ou Pix</span><span>Acesso imediato após o pagamento</span></div>
+        </div>
+      </div>
+    </details>
+
+      </div>
+    </details>
+
+    <details class="category-toggle">
+      <summary>FAQ</summary>
+      <div class="category-toggle__body">
+
+    <p style="font-size:0.85rem;">Accordion em vidro fosco — mesma superfície do Card 3D. Ícone de seta (chevron), não +/−, pra manter o mesmo idioma visual já usado nos recolhíveis deste design system. Uma pergunta pode ficar aberta por padrão pra sinalizar que é interativo.</p>
+    <details class="model-toggle">
+      <summary><span class="model-thumb"><span></span><span></span></span> Modelos (claro e escuro)</summary>
+      <div class="model-toggle__body">
+        <div class="card3d-bg card3d-bg--dark">
+          <div class="faq">
+            <details class="faq-item faq-item--dark" open>
+              <summary class="faq-item__q">Preciso saber programar?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="faq-item__chevron"><path d="m6 9 6 6 6-6"/></svg></summary>
+              <p class="faq-item__a">Não. Você conversa em português e a ferramenta executa por você — sem precisar escrever uma linha de código.</p>
+            </details>
+            <details class="faq-item faq-item--dark">
+              <summary class="faq-item__q">Funciona no celular?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="faq-item__chevron"><path d="m6 9 6 6 6-6"/></svg></summary>
+              <p class="faq-item__a">Você acompanha pelo celular, mas recomendamos computador nas aulas práticas pra replicar o passo a passo.</p>
+            </details>
+            <details class="faq-item faq-item--dark">
+              <summary class="faq-item__q">Posso cancelar quando quiser?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="faq-item__chevron"><path d="m6 9 6 6 6-6"/></svg></summary>
+              <p class="faq-item__a">Sim, sem multa e sem burocracia — o cancelamento é feito direto na plataforma.</p>
+            </details>
+            <details class="faq-item faq-item--dark">
+              <summary class="faq-item__q">Quanto tempo tenho de acesso?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="faq-item__chevron"><path d="m6 9 6 6 6-6"/></svg></summary>
+              <p class="faq-item__a">Acesso vitalício a partir da confirmação do pagamento.</p>
+            </details>
+          </div>
+        </div>
+        <div style="height:1.25rem;"></div>
+        <div class="card3d-bg card3d-bg--light">
+          <div class="faq">
+            <details class="faq-item faq-item--light" open>
+              <summary class="faq-item__q">Preciso saber programar?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="faq-item__chevron"><path d="m6 9 6 6 6-6"/></svg></summary>
+              <p class="faq-item__a">Não. Você conversa em português e a ferramenta executa por você — sem precisar escrever uma linha de código.</p>
+            </details>
+            <details class="faq-item faq-item--light">
+              <summary class="faq-item__q">Funciona no celular?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="faq-item__chevron"><path d="m6 9 6 6 6-6"/></svg></summary>
+              <p class="faq-item__a">Você acompanha pelo celular, mas recomendamos computador nas aulas práticas pra replicar o passo a passo.</p>
+            </details>
+            <details class="faq-item faq-item--light">
+              <summary class="faq-item__q">Posso cancelar quando quiser?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="faq-item__chevron"><path d="m6 9 6 6 6-6"/></svg></summary>
+              <p class="faq-item__a">Sim, sem multa e sem burocracia — o cancelamento é feito direto na plataforma.</p>
+            </details>
+            <details class="faq-item faq-item--light">
+              <summary class="faq-item__q">Quanto tempo tenho de acesso?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="faq-item__chevron"><path d="m6 9 6 6 6-6"/></svg></summary>
+              <p class="faq-item__a">Acesso vitalício a partir da confirmação do pagamento.</p>
+            </details>
+          </div>
         </div>
       </div>
     </details>
