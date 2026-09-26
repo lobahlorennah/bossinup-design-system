@@ -638,6 +638,10 @@
   .card3d--light .trust-row, .card3d--light .trust-row span { color: #595959; }
 
   /* Botão glass — 3 cores (verde/borgonha/marinho), superfície de vidro */
+  .btn-glass-compare { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+  @media (max-width: 600px) { .btn-glass-compare { grid-template-columns: 1fr; } }
+  .btn-glass-compare > div { display: flex; flex-direction: column; align-items: center; gap: 1rem; padding: 2rem 1.25rem; }
+  .card3d-bg--light .btn-glass { border: 1px solid rgba(10,10,10,.18); box-shadow: 0 10px 24px rgba(0,0,0,.18), inset 0 1px 0 rgba(255,255,255,.5); }
   .btn-glass {
     display: inline-block;
     font-family: 'Poppins', var(--font-body);
@@ -1464,10 +1468,17 @@
 
     <h3 class="sub-title" style="margin-top:0;">Botão (padrão — vidro fosco)</h3>
     <p style="font-size:0.85rem;">Superfície de vidro fosco (translúcido + blur) em vez do sólido — substitui o botão antigo. Três cores: <strong>verde</strong> (CTA principal, o de sempre), <strong>borgonha</strong> e <strong>marinho</strong> (as duas já catalogadas em Cores) — mesmo tom, só variando opacidade pro efeito de vidro, nada de cor nova.</p>
-    <div class="card3d-bg card3d-bg--dark" style="padding:2rem; display:flex; justify-content:center; gap:1.25rem; flex-wrap:wrap;">
-      <a class="btn-glass btn-glass--verde" href="#" onclick="return false;">Quero Garantir Agora</a>
-      <a class="btn-glass btn-glass--borgonha" href="#" onclick="return false;">Quero Garantir Agora</a>
-      <a class="btn-glass btn-glass--marinho" href="#" onclick="return false;">Quero Garantir Agora</a>
+    <div class="btn-glass-compare">
+      <div class="card3d-bg card3d-bg--dark">
+        <a class="btn-glass btn-glass--verde" href="#" onclick="return false;">Quero Garantir Agora</a>
+        <a class="btn-glass btn-glass--borgonha" href="#" onclick="return false;">Quero Garantir Agora</a>
+        <a class="btn-glass btn-glass--marinho" href="#" onclick="return false;">Quero Garantir Agora</a>
+      </div>
+      <div class="card3d-bg card3d-bg--light">
+        <a class="btn-glass btn-glass--verde" href="#" onclick="return false;">Quero Garantir Agora</a>
+        <a class="btn-glass btn-glass--borgonha" href="#" onclick="return false;">Quero Garantir Agora</a>
+        <a class="btn-glass btn-glass--marinho" href="#" onclick="return false;">Quero Garantir Agora</a>
+      </div>
     </div>
 
       </div>
