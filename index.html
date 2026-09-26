@@ -437,6 +437,13 @@
   .thankyou-help h4 { font-family: var(--font-display); font-weight: 500; font-size: 1.3rem; margin: 0 0 0.75rem; color: #0a0a0a; }
   .thankyou-help p { font-size: 0.85rem; margin: 0 0 1.5rem; max-width: 32em; margin-left: auto; margin-right: auto; }
 
+  /* Garantia — selo (imagem a gerar) + título + texto */
+  .guarantee { display: flex; align-items: center; gap: 1.75rem; }
+  @media (max-width: 600px) { .guarantee { flex-direction: column; text-align: center; } }
+  .guarantee__badge { width: 120px; height: 120px; border-radius: 50%; flex-shrink: 0; border: 1.5px dashed var(--border-strong); display: flex; align-items: center; justify-content: center; text-align: center; font-size: 0.6rem; line-height: 1.4; color: var(--text-tertiary); padding: 0.5rem; }
+  .guarantee__title { font-family: var(--font-display); font-weight: 500; font-size: 1.25rem; margin: 0 0 0.5rem; }
+  .guarantee__body { font-size: 0.85rem; line-height: 1.6; margin: 0; }
+
   /* Hero demo (página de vendas — HEAD) */
   .hero-demo { display: flex; min-height: 400px; }
   .hero-demo--dark { background: linear-gradient(to right, #595959 0%, #0a0a0a 50%); color: #fafafa; }
@@ -1596,6 +1603,39 @@
             </div>
           </div>
           <div class="trust-row" style="color:#595959;"><span>7 dias de garantia incondicional</span><span>Cartão de crédito ou Pix</span><span>Acesso imediato após o pagamento</span></div>
+        </div>
+      </div>
+    </details>
+
+      </div>
+    </details>
+
+    <details class="category-toggle">
+      <summary>Garantia</summary>
+      <div class="category-toggle__body">
+
+    <p style="font-size:0.85rem;">Selo (imagem gerada à parte, PB, sem dourado/estrelas — ver Cores) + título + texto de garantia. O espaço do selo abaixo fica marcado como placeholder até a imagem final ser gerada.</p>
+    <details class="model-toggle">
+      <summary><span class="model-thumb"><span></span><span></span></span> Modelos (claro e escuro)</summary>
+      <div class="model-toggle__body">
+        <div class="card3d-bg card3d-bg--dark">
+          <div class="card3d card3d--dark guarantee">
+            <div class="guarantee__badge">imagem do selo<br>(gerar — 120×120)</div>
+            <div>
+              <p class="guarantee__title">Garantia de 7 dias</p>
+              <p class="guarantee__body">Você tem 7 dias após a compra pra testar o conteúdo. Se não for pra você, é só enviar um e-mail pro suporte — devolvemos 100% do valor, sem burocracia.</p>
+            </div>
+          </div>
+        </div>
+        <div style="height:1.25rem;"></div>
+        <div class="card3d-bg card3d-bg--light">
+          <div class="card3d card3d--light guarantee">
+            <div class="guarantee__badge">imagem do selo<br>(gerar — 120×120)</div>
+            <div>
+              <p class="guarantee__title">Garantia de 7 dias</p>
+              <p class="guarantee__body">Você tem 7 dias após a compra pra testar o conteúdo. Se não for pra você, é só enviar um e-mail pro suporte — devolvemos 100% do valor, sem burocracia.</p>
+            </div>
+          </div>
         </div>
       </div>
     </details>
