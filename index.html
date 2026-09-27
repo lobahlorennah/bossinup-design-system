@@ -2676,6 +2676,7 @@
   <section id="tokens">
     <div class="sec-head"><h2 class="sec-title">Tokens CSS</h2><span class="sec-index">10</span></div>
     <p>Pronto pra colar no início de qualquer projeto.</p>
+    <div class="note-flag">Halimun e The Seasons são fontes de licença (Canva/compradas), não existem como web font pra colar num site. Sem o arquivo real, <code>--font-script</code> cai no fallback <strong>Parisienne</strong> (já é uma fonte do Google Fonts, precisa importar com <code>&lt;link&gt;</code> no <code>&lt;head&gt;</code>) — sem isso, o navegador usa o genérico <code>cursive</code>, que no Windows/Chrome vira Comic Sans.</div>
     <div class="code-block">
       <button class="copy-btn" onclick="copyTokens(this)">Copiar</button>
       <pre id="tokens-code">:root {
@@ -2702,7 +2703,7 @@
   /* Tipografia */
   --font-display: 'The Seasons', Georgia, serif;
   --font-body: 'Montserrat', Arial, sans-serif;
-  --font-script: 'Halimun', cursive;
+  --font-script: 'Halimun', 'Parisienne', cursive;
 
   /* Espaçamento (extraído do site real) */
   --space-1: 5px;
