@@ -481,8 +481,8 @@
   .hero-demo--dark .hero-demo__extra { color: #f2f2f2; }
   .hero-demo--light .hero-demo__extra { color: #363534; }
   .hero-demo__checklist { display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; padding: 1rem 1.5rem; font-size: 0.8rem; font-weight: 600; }
-  .hero-demo__checklist.checklist-after-dark { background: #fafafa; color: #0a0a0a; }
-  .hero-demo__checklist.checklist-after-light { background: #0a0a0a; color: #fafafa; }
+  .checklist-after-dark { background: linear-gradient(160deg, rgba(255,255,255,.85) 0%, rgba(255,255,255,.55) 100%); border: 1px solid rgba(10,10,10,.16); box-shadow: inset 0 1px 0 rgba(255,255,255,.9); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); color: #0a0a0a; }
+  .checklist-after-light { background: linear-gradient(160deg, rgba(20,20,20,.85) 0%, rgba(20,20,20,.55) 100%); border: 1px solid rgba(255,255,255,.22); box-shadow: inset 0 1px 0 rgba(255,255,255,.15); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); color: #fafafa; }
   .hero-demo__checklist span::before { content: "✓ "; }
 
   /* Hero Formato 2 — com notificações flutuantes */
@@ -532,8 +532,6 @@
   .hero3__body { font-size: 0.88rem; line-height: 1.6; margin: 0; max-width: 32em; }
   .hero3--dark .hero3__body { color: #f2f2f2; } .hero3--light .hero3__body { color: #363534; }
   .hero3__closebar { text-align: center; padding: 0.85rem 1rem; font-weight: 700; letter-spacing: 0.04em; font-size: 0.85rem; }
-  .hero3__closebar.checklist-after-dark { background: #fafafa; color: #0a0a0a; }
-  .hero3__closebar.checklist-after-light { background: #0a0a0a; color: #fafafa; }
 
   /* Head complementar — isca/ebook */
   .headc { text-align: center; padding: 3rem 2rem 0; }
@@ -552,8 +550,6 @@
   .headc__download { font-size: 0.76rem; font-weight: 600; text-decoration: underline; display: block; margin: 0.6rem 0 2rem; }
   .headc--dark .headc__download { color: #f2f2f2; } .headc--light .headc__download { color: #363534; }
   .headc__strip { display: flex; gap: 0.6rem; justify-content: center; padding: 1.5rem 1rem; overflow-x: auto; }
-  .headc__strip.checklist-after-dark { background: #fafafa; color: #0a0a0a; }
-  .headc__strip.checklist-after-light { background: #0a0a0a; color: #fafafa; }
   .headc__thumb { width: 52px; height: 68px; border: 1px solid currentColor; opacity: 0.55; flex-shrink: 0; }
 
   /* Card 3D — ícone + título + texto, sombra assumida (regra oficial de Cards) */
