@@ -654,6 +654,9 @@
   .btn-glass--verde { background: linear-gradient(160deg, rgba(12,68,15,.65) 0%, rgba(42,156,49,.65) 100%); }
   .btn-glass--borgonha { background: linear-gradient(160deg, rgba(74,28,40,.8) 0%, rgba(74,28,40,.45) 100%); }
   .btn-glass--marinho { background: linear-gradient(160deg, rgba(12,28,61,.8) 0%, rgba(12,28,61,.45) 100%); }
+  .btn-glass-band--light .btn-glass--verde { background: linear-gradient(358deg, #0c440f 0%, #2a9c31 100%); }
+  .btn-glass-band--light .btn-glass--borgonha { background: #4a1c28; }
+  .btn-glass-band--light .btn-glass--marinho { background: #0c1c3d; }
 
   /* EM TESTE — hero com toques de vidro fosco pontuais (kicker, checklist) sobre foto de fundo inteira, sem virar card */
   .hero-glass-demo--dark { color: #fafafa; }
@@ -946,6 +949,7 @@
         <ul>
           <li>Fala com humor mesmo em assunto sério — é o tempero constante da voz</li>
           <li>Usa a escala de cinza como base visual em tudo</li>
+          <li>Usa Lucide como pacote de ícones padrão em tudo (outline, stroke padrão, sem preenchimento), nunca emoji fora de card</li>
           <li>Nomeia o que não é verdade antes de revelar o que é (estrutura de tese)</li>
           <li>Trata a leitora como amiga, não como aluna</li>
           <li>Mistura autoridade (Governante) com leveza (Performática) na mesma peça</li>
@@ -1528,6 +1532,13 @@
       <a class="btn-glass btn-glass--borgonha" href="#" onclick="return false;">Quero Garantir Agora</a>
       <a class="btn-glass btn-glass--marinho" href="#" onclick="return false;">Quero Garantir Agora</a>
     </div>
+    <div style="height:1.25rem;"></div>
+    <div class="card3d-bg card3d-bg--light btn-glass-band--light" style="padding:2rem; display:flex; justify-content:center; gap:1.25rem; flex-wrap:wrap;">
+      <a class="btn-glass btn-glass--verde" href="#" onclick="return false;">Quero Garantir Agora</a>
+      <a class="btn-glass btn-glass--borgonha" href="#" onclick="return false;">Quero Garantir Agora</a>
+      <a class="btn-glass btn-glass--marinho" href="#" onclick="return false;">Quero Garantir Agora</a>
+    </div>
+    <div class="note-flag">No fundo claro, as 3 cores ficam opacas (sólidas) em vez de translúcidas — o vidro fosco original ficaria lavado/pastel sobre branco. A versão escura acima continua translúcida, é a referência oficial de "vidro".</div>
 
       </div>
     </details>
