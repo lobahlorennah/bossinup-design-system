@@ -879,6 +879,17 @@
 
   footer.page-footer { margin-top: 5rem; padding-top: 1.5rem; border-top: 1px solid var(--border); font-size: 0.78rem; color: var(--text-tertiary); }
 
+  .back-to-top {
+    position: fixed; left: 1.25rem; bottom: 1.25rem; z-index: 50;
+    width: 44px; height: 44px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.2);
+    backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+    color: #fafafa; text-decoration: none;
+    box-shadow: 0 6px 18px rgba(0,0,0,.4), inset 0 1px 0 rgba(255,255,255,.15);
+  }
+  .back-to-top svg { width: 20px; height: 20px; }
+
   a.focus-visible, button:focus-visible, a:focus-visible { outline: 2px solid var(--border-strong); outline-offset: 2px; }
 
   @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
@@ -2784,4 +2795,5 @@ function copyTokens(btn) {
 }
 </script>
 
+<a href="#top" class="back-to-top" aria-label="Voltar ao topo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg></a>
 </body></html>
