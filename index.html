@@ -900,13 +900,14 @@
   .transition-demo__half--dark { top: 0; background: #0a0a0a; }
   .transition-demo__half--light { bottom: 0; background: #fafafa; }
   .transition-demo__seam-glass {
-    position: absolute; left: 0; right: 0; top: calc(50% - 36px); height: 72px;
+    position: absolute; left: 0; right: 0; bottom: 50%; height: 56px;
     background: rgba(255,255,255,.1); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
-    border-top: 1px solid rgba(255,255,255,.2); border-bottom: 1px solid rgba(255,255,255,.2);
+    border-top: 1px solid rgba(255,255,255,.2); border-bottom: 1px solid rgba(255,255,255,.25);
   }
   .transition-demo__seam-glass--dark {
-    background: rgba(10,10,10,.16); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
-    border-top: 1px solid rgba(255,255,255,.08); border-bottom: 1px solid rgba(255,255,255,.08);
+    bottom: auto; top: 50%;
+    background: rgba(10,10,10,.14); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+    border-top: 1px solid rgba(0,0,0,.18); border-bottom: 1px solid rgba(0,0,0,.22);
   }
   .transition-demo__seam-glow {
     position: absolute; left: 50%; top: 50%; width: 320px; height: 130px; transform: translate(-50%, -50%);
@@ -1345,14 +1346,14 @@
           <div class="transition-demo__half transition-demo__half--light"></div>
         </div>
 
-        <p style="font-size:0.8rem; font-weight:600; margin:1.5rem 0 0.5rem;">Opção A — clara (faixa de vidro fosco clara na costura)</p>
+        <p style="font-size:0.8rem; font-weight:600; margin:1.5rem 0 0.5rem;">Opção A — clara (borda de vidro fosco branca em cima da parte preta)</p>
         <div class="transition-demo">
           <div class="transition-demo__half transition-demo__half--dark"></div>
           <div class="transition-demo__half transition-demo__half--light"></div>
           <div class="transition-demo__seam-glass"></div>
         </div>
 
-        <p style="font-size:0.8rem; font-weight:600; margin:1.5rem 0 0.5rem;">Opção A — escura (faixa de vidro fosco escura na costura)</p>
+        <p style="font-size:0.8rem; font-weight:600; margin:1.5rem 0 0.5rem;">Opção A — escura (borda de vidro fosco preta em cima da parte clara)</p>
         <div class="transition-demo">
           <div class="transition-demo__half transition-demo__half--dark"></div>
           <div class="transition-demo__half transition-demo__half--light"></div>
