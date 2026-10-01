@@ -908,6 +908,16 @@
     position: absolute; left: 50%; top: 50%; width: 320px; height: 130px; transform: translate(-50%, -50%);
     background: #fff; opacity: .14; filter: blur(42px); border-radius: 50%; pointer-events: none;
   }
+  .transition-demo__seam-gradient {
+    position: absolute; left: 0; right: 0; top: calc(50% - 50px); height: 100px;
+    background: linear-gradient(to bottom, #0a0a0a 0%, #fafafa 100%);
+  }
+
+  .section-bg-demo { position: relative; height: 150px; border-radius: 12px; overflow: hidden; border: 1px solid var(--border); margin-bottom: 0.75rem; }
+  .section-bg-demo--dark { background: #0a0a0a; }
+  .section-bg-demo--light { background: #fafafa; }
+  .section-bg-demo__blob { position: absolute; border-radius: 50%; background: rgba(255,255,255,.08); filter: blur(40px); pointer-events: none; }
+  .section-bg-demo--light .section-bg-demo__blob { background: rgba(10,10,10,.06); }
 </style>
 
 <div class="sidebar">
@@ -1345,7 +1355,33 @@
           <div class="transition-demo__seam-glow"></div>
         </div>
 
-        <div class="note-flag">Nos dois casos o fundo de cada metade continua 100% chapado (<code>#0A0A0A</code> / <code>#FAFAFA</code>) — só a linha da emenda ganha uma camada extra fina por cima, do mesmo jeito que o vidro fosco já é usado em botão/card/selo. Ainda em teste — não é regra oficial.</div>
+        <p style="font-size:0.8rem; font-weight:600; margin:1.5rem 0 0.5rem;">Opção C — degradê curto e completo na costura</p>
+        <div class="transition-demo">
+          <div class="transition-demo__half transition-demo__half--dark"></div>
+          <div class="transition-demo__half transition-demo__half--light"></div>
+          <div class="transition-demo__seam-gradient"></div>
+        </div>
+
+        <div class="note-flag">Nos três casos o fundo de cada metade continua 100% chapado (<code>#0A0A0A</code> / <code>#FAFAFA</code>) — só a linha da emenda ganha um tratamento extra, curto, por cima. Na Opção C o degradê vai de preto a branco por completo, mas só dentro dessa faixa curta — não é o fundo da seção virando degradê, é a própria emenda. Ainda em teste — não é regra oficial.</div>
+      </div>
+    </details>
+
+    <h3 class="sub-title" style="margin-top:2.5rem;">Em teste — Fundo de seção: estático vs. vidro</h3>
+    <p style="font-size:0.85rem;">A regra de Alternância continua valendo pro tom base (sempre um dos dois chapados) — o que muda aqui é só uma camada de textura por cima desse tom, não a cor em si. "Estático" é o que já temos hoje: fundo liso, sem nenhuma camada. "Vidro" acrescenta formas suaves desfocadas por cima do mesmo fundo chapado, dando profundidade sem trocar o tom.</p>
+    <details class="model-toggle">
+      <summary><span class="model-thumb"><span></span><span></span></span> Estático vs. Vidro</summary>
+      <div class="model-toggle__body">
+
+        <p style="font-size:0.8rem; font-weight:600; margin:0 0 0.5rem;">Estático (padrão atual)</p>
+        <div class="section-bg-demo section-bg-demo--dark"></div>
+
+        <p style="font-size:0.8rem; font-weight:600; margin:1.5rem 0 0.5rem;">Vidro (mesmo fundo chapado + formas desfocadas por cima)</p>
+        <div class="section-bg-demo section-bg-demo--dark section-bg-demo--glass">
+          <span class="section-bg-demo__blob" style="width:220px; height:220px; top:-60px; left:-40px;"></span>
+          <span class="section-bg-demo__blob" style="width:170px; height:170px; bottom:-50px; right:-20px;"></span>
+        </div>
+
+        <div class="note-flag">O tom de base (<code>#0A0A0A</code> / <code>#FAFAFA</code>) nunca muda — as formas são só uma textura, bem sutil, sem virar gradiente visível nem mudar o contraste do texto por cima. Primeiro rascunho só no escuro; se fizer sentido seguir, faço a versão clara e outras variações de "etc" também.</div>
       </div>
     </details>
 
