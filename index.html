@@ -899,12 +899,14 @@
   .transition-demo__half { position: absolute; left: 0; right: 0; height: 50%; }
   .transition-demo__half--dark { top: 0; background: #0a0a0a; }
   .transition-demo__half--light { bottom: 0; background: #fafafa; }
-  .transition-demo__half--light-top { top: 0; background: #fafafa; }
-  .transition-demo__half--dark-bottom { bottom: 0; background: #0a0a0a; }
   .transition-demo__seam-glass {
     position: absolute; left: 0; right: 0; top: calc(50% - 36px); height: 72px;
     background: rgba(255,255,255,.1); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
     border-top: 1px solid rgba(255,255,255,.2); border-bottom: 1px solid rgba(255,255,255,.2);
+  }
+  .transition-demo__seam-glass--dark {
+    background: rgba(10,10,10,.16); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+    border-top: 1px solid rgba(255,255,255,.08); border-bottom: 1px solid rgba(255,255,255,.08);
   }
   .transition-demo__seam-glow {
     position: absolute; left: 50%; top: 50%; width: 320px; height: 130px; transform: translate(-50%, -50%);
@@ -1343,18 +1345,18 @@
           <div class="transition-demo__half transition-demo__half--light"></div>
         </div>
 
-        <p style="font-size:0.8rem; font-weight:600; margin:1.5rem 0 0.5rem;">Opção A — faixa de vidro fosco na costura (escuro em cima)</p>
+        <p style="font-size:0.8rem; font-weight:600; margin:1.5rem 0 0.5rem;">Opção A — clara (faixa de vidro fosco clara na costura)</p>
         <div class="transition-demo">
           <div class="transition-demo__half transition-demo__half--dark"></div>
           <div class="transition-demo__half transition-demo__half--light"></div>
           <div class="transition-demo__seam-glass"></div>
         </div>
 
-        <p style="font-size:0.8rem; font-weight:600; margin:1.5rem 0 0.5rem;">Opção A — faixa de vidro fosco na costura (claro em cima)</p>
+        <p style="font-size:0.8rem; font-weight:600; margin:1.5rem 0 0.5rem;">Opção A — escura (faixa de vidro fosco escura na costura)</p>
         <div class="transition-demo">
-          <div class="transition-demo__half transition-demo__half--light-top"></div>
-          <div class="transition-demo__half transition-demo__half--dark-bottom"></div>
-          <div class="transition-demo__seam-glass"></div>
+          <div class="transition-demo__half transition-demo__half--dark"></div>
+          <div class="transition-demo__half transition-demo__half--light"></div>
+          <div class="transition-demo__seam-glass transition-demo__seam-glass--dark"></div>
         </div>
 
         <p style="font-size:0.8rem; font-weight:600; margin:1.5rem 0 0.5rem;">Opção B — brilho suave na costura</p>
