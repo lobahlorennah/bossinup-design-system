@@ -899,6 +899,8 @@
   .transition-demo__half { position: absolute; left: 0; right: 0; height: 50%; }
   .transition-demo__half--dark { top: 0; background: #0a0a0a; }
   .transition-demo__half--light { bottom: 0; background: #fafafa; }
+  .transition-demo__half--light-top { top: 0; background: #fafafa; }
+  .transition-demo__half--dark-bottom { bottom: 0; background: #0a0a0a; }
   .transition-demo__seam-glass {
     position: absolute; left: 0; right: 0; top: calc(50% - 36px); height: 72px;
     background: rgba(255,255,255,.1); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
@@ -909,7 +911,7 @@
     background: #fff; opacity: .14; filter: blur(42px); border-radius: 50%; pointer-events: none;
   }
   .transition-demo__seam-gradient {
-    position: absolute; left: 0; right: 0; top: calc(50% - 50px); height: 100px;
+    position: absolute; left: 0; right: 0; top: calc(50% - 80px); height: 160px;
     background: linear-gradient(to bottom, #0a0a0a 0%, #fafafa 100%);
   }
 
@@ -1341,10 +1343,17 @@
           <div class="transition-demo__half transition-demo__half--light"></div>
         </div>
 
-        <p style="font-size:0.8rem; font-weight:600; margin:1.5rem 0 0.5rem;">Opção A — faixa de vidro fosco na costura</p>
+        <p style="font-size:0.8rem; font-weight:600; margin:1.5rem 0 0.5rem;">Opção A — faixa de vidro fosco na costura (escuro em cima)</p>
         <div class="transition-demo">
           <div class="transition-demo__half transition-demo__half--dark"></div>
           <div class="transition-demo__half transition-demo__half--light"></div>
+          <div class="transition-demo__seam-glass"></div>
+        </div>
+
+        <p style="font-size:0.8rem; font-weight:600; margin:1.5rem 0 0.5rem;">Opção A — faixa de vidro fosco na costura (claro em cima)</p>
+        <div class="transition-demo">
+          <div class="transition-demo__half transition-demo__half--light-top"></div>
+          <div class="transition-demo__half transition-demo__half--dark-bottom"></div>
           <div class="transition-demo__seam-glass"></div>
         </div>
 
