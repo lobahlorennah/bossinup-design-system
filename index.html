@@ -894,6 +894,20 @@
   a.focus-visible, button:focus-visible, a:focus-visible { outline: 2px solid var(--border-strong); outline-offset: 2px; }
 
   @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+  .transition-demo { position: relative; height: 200px; border-radius: 12px; overflow: hidden; border: 1px solid var(--border); margin-bottom: 0.75rem; }
+  .transition-demo__half { position: absolute; left: 0; right: 0; height: 50%; }
+  .transition-demo__half--dark { top: 0; background: #0a0a0a; }
+  .transition-demo__half--light { bottom: 0; background: #fafafa; }
+  .transition-demo__seam-glass {
+    position: absolute; left: 0; right: 0; top: calc(50% - 36px); height: 72px;
+    background: rgba(255,255,255,.1); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+    border-top: 1px solid rgba(255,255,255,.2); border-bottom: 1px solid rgba(255,255,255,.2);
+  }
+  .transition-demo__seam-glow {
+    position: absolute; left: 50%; top: 50%; width: 320px; height: 130px; transform: translate(-50%, -50%);
+    background: #fff; opacity: .14; filter: blur(42px); border-radius: 50%; pointer-events: none;
+  }
 </style>
 
 <div class="sidebar">
@@ -1304,6 +1318,36 @@
       <div style="background:#fafafa; color:#0a0a0a; padding:1.5rem; text-align:center; font-family:var(--font-mono); font-size:0.85rem; border-top:1px solid var(--border);">#FAFAFA — seção clara</div>
     </div>
     <div class="note-flag">Uma seção nunca repete o fundo da seção imediatamente anterior — é essa troca constante que dá o ritmo da página, não a cor. Título/texto sempre trocam de cor junto (<code>--gray-800</code> sobre claro, <code>--gray-100</code> sobre escuro), nunca ficam com baixo contraste pra "suavizar" a transição.</div>
+
+    <h3 class="sub-title" style="margin-top:2.5rem;">Em teste — Transição entre seções</h3>
+    <p style="font-size:0.85rem;">A troca de fundo continua sempre entre os dois tons chapados acima — isso não muda. O que pode suavizar é só a <strong>costura</strong>, a linha onde uma seção encosta na outra: uma camada fina por cima da emenda, sem criar um terceiro tom de fundo pra seção inteira (isso seguiria sendo contra a regra de Alternância).</p>
+    <details class="model-toggle">
+      <summary><span class="model-thumb"><span></span><span></span></span> Opções de costura</summary>
+      <div class="model-toggle__body">
+
+        <p style="font-size:0.8rem; font-weight:600; margin:0 0 0.5rem;">Hoje: emenda reta, sem tratamento</p>
+        <div class="transition-demo">
+          <div class="transition-demo__half transition-demo__half--dark"></div>
+          <div class="transition-demo__half transition-demo__half--light"></div>
+        </div>
+
+        <p style="font-size:0.8rem; font-weight:600; margin:1.5rem 0 0.5rem;">Opção A — faixa de vidro fosco na costura</p>
+        <div class="transition-demo">
+          <div class="transition-demo__half transition-demo__half--dark"></div>
+          <div class="transition-demo__half transition-demo__half--light"></div>
+          <div class="transition-demo__seam-glass"></div>
+        </div>
+
+        <p style="font-size:0.8rem; font-weight:600; margin:1.5rem 0 0.5rem;">Opção B — brilho suave na costura</p>
+        <div class="transition-demo">
+          <div class="transition-demo__half transition-demo__half--dark"></div>
+          <div class="transition-demo__half transition-demo__half--light"></div>
+          <div class="transition-demo__seam-glow"></div>
+        </div>
+
+        <div class="note-flag">Nos dois casos o fundo de cada metade continua 100% chapado (<code>#0A0A0A</code> / <code>#FAFAFA</code>) — só a linha da emenda ganha uma camada extra fina por cima, do mesmo jeito que o vidro fosco já é usado em botão/card/selo. Ainda em teste — não é regra oficial.</div>
+      </div>
+    </details>
 
     <h3 class="sub-title" style="margin-top:2.5rem;">Escala de tamanho</h3>
     <p style="font-size:0.9rem;">Tamanho de fonte por papel, específico de site (por isso tem coluna Desktop e Mobile) — não se aplica a Ebooks, Instagram ou Aplicativos, que têm suas próprias telas/escalas.</p>
