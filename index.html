@@ -2426,8 +2426,9 @@
     <p style="font-size:0.9rem;">Formatos de diagramação sem função obrigatória fixa — servem pra qualquer conteúdo que precise dessa estrutura (texto corrido, lista de módulos, diferenciais, etapas etc.), separados por categoria. Ícones sempre do pacote Lucide (outline, sem preenchimento), nunca emoji.</p>
 
     <h4 style="font-size:0.85rem; margin:1.5rem 0 0.5rem;">1 — Texto + imagem alternado em blocos</h4>
-    <p style="font-size:0.82rem; color:var(--text-secondary); margin:0 0 0.5rem;">Blocos que se repetem na mesma página (partes de um conteúdo, etapas, módulos). A lateralidade da imagem <strong>nunca repete</strong> do bloco anterior pro próximo.</p>
+    <p style="font-size:0.82rem; color:var(--text-secondary); margin:0 0 0.5rem;">Blocos que se repetem na mesma página (partes de um conteúdo, etapas, módulos). A lateralidade da imagem <strong>nunca repete</strong> do bloco anterior pro próximo. É uma dobra completa — sempre vem com um título introduzindo a sequência antes dos blocos.</p>
     <div class="free-demo">
+      <h5 class="free-split__title" style="margin:0 0 1.5rem;">Título que introduz a sequência de blocos</h5>
       <div class="free-split">
         <div class="free-split__text">
           <span class="free-split__eyebrow">Parte 1</span>
@@ -2459,8 +2460,9 @@
     <div class="note-flag">Bloco 1 = imagem à direita, bloco 2 = inverte, bloco 3 = inverte de novo. Nunca o mesmo lado duas vezes seguidas — a alternativa à inversão é centralizar o bloco (sem imagem lateral).</div>
 
     <h4 style="font-size:0.85rem; margin:2rem 0 0.5rem;">2 — Grade de cards com ícone</h4>
-    <p style="font-size:0.82rem; color:var(--text-secondary); margin:0 0 0.5rem;">3 ou 4 colunas, ícone + título + descrição curta. Serve pra módulos, diferenciais, categorias de conteúdo etc.</p>
+    <p style="font-size:0.82rem; color:var(--text-secondary); margin:0 0 0.5rem;">3 ou 4 colunas, ícone + título + descrição curta. Serve pra módulos, diferenciais, categorias de conteúdo etc. É uma dobra completa — sempre vem com um título introduzindo a grade.</p>
     <div class="free-demo">
+      <h5 class="free-split__title" style="margin:0 0 1.5rem; text-align:center;">Título que introduz a grade</h5>
       <div class="free-cards">
         <div class="free-card">
           <span class="free-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
@@ -2486,8 +2488,9 @@
     </div>
 
     <h4 style="font-size:0.85rem; margin:2rem 0 0.5rem;">3 — Grade de cards com imagem</h4>
-    <p style="font-size:0.82rem; color:var(--text-secondary); margin:0 0 0.5rem;">Mesma ideia da grade com ícone, mas cada card abre com uma foto/imagem no topo em vez de ícone.</p>
+    <p style="font-size:0.82rem; color:var(--text-secondary); margin:0 0 0.5rem;">Mesma ideia da grade com ícone, mas cada card abre com uma foto/imagem no topo em vez de ícone. Também é uma dobra completa, com título antes da grade.</p>
     <div class="free-demo">
+      <h5 class="free-split__title" style="margin:0 0 1.5rem; text-align:center;">Título que introduz a grade</h5>
       <div class="free-cards free-cards--img">
         <div class="free-card"><div class="free-card__media"></div><h5 class="free-card__title">Título 1</h5><p class="free-card__body">Descrição curta explicando esse item.</p></div>
         <div class="free-card"><div class="free-card__media"></div><h5 class="free-card__title">Título 2</h5><p class="free-card__body">Descrição curta explicando esse item.</p></div>
@@ -2543,8 +2546,11 @@
     </div>
 
     <h4 style="font-size:0.85rem; margin:2rem 0 0.5rem;">7 — Diagrama de etapas/processo horizontal</h4>
-    <p style="font-size:0.82rem; color:var(--text-secondary); margin:0 0 0.5rem;">Círculos numerados ligados por uma linha, com rótulo embaixo de cada um. Serve pra mostrar um processo ou fluxo em etapas.</p>
+    <p style="font-size:0.82rem; color:var(--text-secondary); margin:0 0 0.5rem;">Círculos numerados ligados por uma linha, com rótulo embaixo de cada um. Serve pra mostrar um processo ou fluxo em etapas. Título e texto de apoio antes do diagrama, e opcionalmente uma caixa de destaque fechando o raciocínio depois.</p>
     <div class="free-demo">
+      <p class="free-split__eyebrow" style="margin-bottom:.4rem; text-align:center;">Eyebrow da dobra</p>
+      <h5 class="free-split__title" style="margin:0 0 .5rem; text-align:center;">Título que introduz o diagrama</h5>
+      <p class="free-split__body" style="text-align:center; margin:0 0 1.5rem;">Texto de apoio explicando o contexto do processo antes de mostrar as etapas.</p>
       <div class="free-steps">
         <div class="free-step"><span class="free-step__circle">1</span><span class="free-step__label">Etapa um</span></div>
         <div class="free-step"><span class="free-step__circle">2</span><span class="free-step__label">Etapa dois</span></div>
@@ -2552,11 +2558,13 @@
         <div class="free-step"><span class="free-step__circle">4</span><span class="free-step__label">Etapa quatro</span></div>
         <div class="free-step"><span class="free-step__circle">5</span><span class="free-step__label">Etapa cinco</span></div>
       </div>
+      <div class="note-flag" style="margin:1.5rem 0 0;">Caixa de destaque opcional fechando o raciocínio, reforçando o que mais importa entre as etapas.</div>
     </div>
 
     <h4 style="font-size:0.85rem; margin:2rem 0 0.5rem;">8 — Imagem + checklist lateral</h4>
-    <p style="font-size:0.82rem; color:var(--text-secondary); margin:0 0 0.5rem;">Foto de um lado, lista de benefícios com check do outro. Diferente do formato 1 porque aqui é só uma lista, sem título/subtítulo de bloco.</p>
+    <p style="font-size:0.82rem; color:var(--text-secondary); margin:0 0 0.5rem;">Foto de um lado, lista de benefícios com check do outro. Diferente do formato 1 porque aqui é só uma lista, sem título/subtítulo por bloco — mas a dobra em si sempre tem um título acima, tipo uma pergunta ("Para quem é X?").</p>
     <div class="free-demo">
+      <h5 class="free-split__title" style="margin:0 0 1.5rem; text-align:center;">Título que introduz a dobra?</h5>
       <div class="free-combo">
         <div class="free-combo__media"></div>
         <div class="free-combo__text free-list">
@@ -2572,8 +2580,10 @@
     <div class="note-flag">A imagem pode ficar dos dois lados — aqui está à esquerda, mas inverte pra direita dependendo do contexto da página.</div>
 
     <h4 style="font-size:0.85rem; margin:2rem 0 0.5rem;">9 — Cards de texto numerados sem ícone</h4>
-    <p style="font-size:0.82rem; color:var(--text-secondary); margin:0 0 0.5rem;">3 colunas, só número + título + corpo, sem ícone nem imagem. Serve pra listar objeções, motivos ou passos curtos.</p>
+    <p style="font-size:0.82rem; color:var(--text-secondary); margin:0 0 0.5rem;">3 colunas, só número + título + corpo, sem ícone nem imagem. Serve pra listar objeções, motivos ou passos curtos. Também vem com título (e opcionalmente um badge) antes dos cards.</p>
     <div class="free-demo">
+      <p class="free-split__eyebrow" style="margin-bottom:.4rem; text-align:center;">Eyebrow da dobra</p>
+      <h5 class="free-split__title" style="margin:0 0 1.5rem; text-align:center;">Título que introduz os cards</h5>
       <div class="free-cards free-cards--3col">
         <div class="free-card"><span class="free-card__num">01</span><h5 class="free-card__title">Título 1</h5><p class="free-card__body">Descrição curta explicando esse item.</p></div>
         <div class="free-card"><span class="free-card__num">02</span><h5 class="free-card__title">Título 2</h5><p class="free-card__body">Descrição curta explicando esse item.</p></div>
