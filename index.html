@@ -933,10 +933,20 @@
     opacity: .5; mix-blend-mode: overlay;
   }
 
-  .glassplate-demo { background: #000; border-radius: 12px; overflow: hidden; border: 1px solid var(--border); margin-bottom: 0.75rem; }
-  .glassplate { padding: 2.5rem 1.5rem; text-align: center; font-size: 0.8rem; font-weight: 600; backdrop-filter: blur(22px); -webkit-backdrop-filter: blur(22px); }
-  .glassplate--light { background: rgba(250,250,250,.94); color: #0a0a0a; }
-  .glassplate--dark { background: rgba(10,10,10,.88); color: #fafafa; }
+  .glassplate-demo { position: relative; background: #000; border-radius: 12px; overflow: hidden; border: 1px solid var(--border); margin-bottom: 0.75rem; }
+  .glassplate-demo::before {
+    content: ""; position: absolute; inset: 0; z-index: 0;
+    background:
+      radial-gradient(circle at 18% 12%, rgba(255,255,255,.3), transparent 30%),
+      radial-gradient(circle at 82% 28%, rgba(255,255,255,.18), transparent 28%),
+      radial-gradient(circle at 30% 55%, rgba(255,255,255,.22), transparent 26%),
+      radial-gradient(circle at 70% 70%, rgba(255,255,255,.16), transparent 28%),
+      radial-gradient(circle at 25% 92%, rgba(255,255,255,.24), transparent 26%),
+      radial-gradient(circle at 85% 95%, rgba(255,255,255,.14), transparent 24%);
+  }
+  .glassplate { position: relative; z-index: 1; padding: 2.5rem 1.5rem; text-align: center; font-size: 0.8rem; font-weight: 600; backdrop-filter: blur(26px); -webkit-backdrop-filter: blur(26px); box-shadow: inset 0 1px 0 rgba(255,255,255,.25); }
+  .glassplate--light { background: rgba(250,250,250,.78); color: #0a0a0a; }
+  .glassplate--dark { background: rgba(10,10,10,.68); color: #fafafa; box-shadow: inset 0 1px 0 rgba(255,255,255,.08); }
   .glassplate--top { border-radius: 0 0 28px 28px; }
   .glassplate--mid { border-radius: 28px; }
   .glassplate--bottom { border-radius: 28px 28px 0 0; }
@@ -1491,8 +1501,10 @@
       <div class="model-toggle__body">
         <div class="glassplate-demo">
           <div class="glassplate glassplate--light glassplate--top">Hero — reto em cima</div>
-          <div class="glassplate glassplate--dark glassplate--mid">Seção do meio — arredondado nos dois cantos</div>
-          <div class="glassplate glassplate--light glassplate--mid">Outra seção do meio</div>
+          <div class="glassplate glassplate--dark glassplate--mid">Seção 2</div>
+          <div class="glassplate glassplate--light glassplate--mid">Seção 3</div>
+          <div class="glassplate glassplate--dark glassplate--mid">Seção 4</div>
+          <div class="glassplate glassplate--light glassplate--mid">Seção 5</div>
           <div class="glassplate glassplate--dark glassplate--bottom">Rodapé — reto embaixo</div>
         </div>
         <div class="note-flag">A cor que aparece nos cantinhos arredondados é o que está por trás de tudo (aqui, preto). Ainda em teste — não é regra oficial, e vamos elaborar mais essa ideia (espessura da borda, se tem alguma linha/brilho na borda do vidro etc.).</div>
