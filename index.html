@@ -895,43 +895,13 @@
 
   @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 
-  .transition-demo { position: relative; height: 200px; border-radius: 12px; overflow: hidden; border: 1px solid var(--border); margin-bottom: 0.75rem; }
-  .transition-demo__half { position: absolute; left: 0; right: 0; height: 50%; }
-  .transition-demo__half--dark { top: 0; background: #0a0a0a; }
-  .transition-demo__half--light { bottom: 0; background: #fafafa; }
-  .transition-demo__seam-glass {
-    position: absolute; left: 0; right: 0; bottom: 50%; height: 56px;
-    background: rgba(255,255,255,.1); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
-    border-bottom: 1px solid rgba(255,255,255,.25);
-    -webkit-mask-image: linear-gradient(to top, #000 0%, #000 75%, transparent 100%);
-    mask-image: linear-gradient(to top, #000 0%, #000 75%, transparent 100%);
-  }
-  .transition-demo__seam-glass--dark {
-    bottom: auto; top: 50%;
-    background: rgba(10,10,10,.14); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
-    border-bottom: none; border-top: 1px solid rgba(0,0,0,.22);
-    -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 75%, transparent 100%);
-    mask-image: linear-gradient(to bottom, #000 0%, #000 75%, transparent 100%);
-  }
-  .transition-demo__seam-glow {
-    position: absolute; left: 50%; top: 50%; width: 320px; height: 130px; transform: translate(-50%, -50%);
-    background: #fff; opacity: .14; filter: blur(42px); border-radius: 50%; pointer-events: none;
-  }
-  .transition-demo__seam-gradient {
-    position: absolute; left: 0; right: 0; top: calc(50% - 80px); height: 160px;
-    background: linear-gradient(to bottom, #0a0a0a 0%, #fafafa 100%);
-  }
-
-  .section-bg-demo { position: relative; height: 150px; border-radius: 12px; overflow: hidden; border: 1px solid var(--border); margin-bottom: 0.75rem; }
-  .section-bg-demo--dark { background: #0a0a0a; }
-  .section-bg-demo--light { background: #fafafa; }
-  .section-bg-demo__blob { position: absolute; border-radius: 50%; background: rgba(255,255,255,.08); filter: blur(40px); pointer-events: none; }
-  .section-bg-demo--light .section-bg-demo__blob { background: rgba(10,10,10,.06); }
-  .section-bg-demo--grain::after {
-    content: ""; position: absolute; inset: 0; pointer-events: none;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-    opacity: .5; mix-blend-mode: overlay;
-  }
+  .glassplate-demo { background: #000; border-radius: 12px; overflow: hidden; border: 1px solid var(--border); margin-bottom: 0.75rem; }
+  .glassplate { padding: 2.5rem 1.5rem; text-align: center; font-size: 0.8rem; font-weight: 600; backdrop-filter: blur(22px); -webkit-backdrop-filter: blur(22px); }
+  .glassplate--light { background: rgba(250,250,250,.94); color: #0a0a0a; }
+  .glassplate--dark { background: rgba(10,10,10,.88); color: #fafafa; }
+  .glassplate--top { border-radius: 0 0 28px 28px; }
+  .glassplate--mid { border-radius: 28px; }
+  .glassplate--bottom { border-radius: 28px 28px 0 0; }
 
   .free-demo { border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; margin-bottom: 0.75rem; }
 
@@ -1398,81 +1368,18 @@
     </div>
     <div class="note-flag">Uma seção nunca repete o fundo da seção imediatamente anterior — é essa troca constante que dá o ritmo da página, não a cor. Título/texto sempre trocam de cor junto (<code>--gray-800</code> sobre claro, <code>--gray-100</code> sobre escuro), nunca ficam com baixo contraste pra "suavizar" a transição.</div>
 
-    <h3 class="sub-title" style="margin-top:2.5rem;">Em teste — Transição entre seções</h3>
-    <p style="font-size:0.85rem;">A troca de fundo continua sempre entre os dois tons chapados acima — isso não muda. O que pode suavizar é só a <strong>costura</strong>, a linha onde uma seção encosta na outra: uma camada fina por cima da emenda, sem criar um terceiro tom de fundo pra seção inteira (isso seguiria sendo contra a regra de Alternância).</p>
+    <h3 class="sub-title" style="margin-top:2.5rem;">Em teste — Placa de vidro</h3>
+    <p style="font-size:0.85rem;">Ideia nova (ainda em elaboração) que substitui os testes de costura e fundo separados: cada seção vira uma <strong>placa de vidro fosco</strong> de lado a lado (sem margem/borda lateral), e a própria curva arredondada dos cantos de cima e/ou de baixo já funciona como a costura — sem precisar de brilho, degradê ou faixa extra. Hero e Rodapé são retos no lado que não tem vizinho (Hero em cima, Rodapé embaixo); todo o resto arredonda nos dois cantos.</p>
     <details class="model-toggle">
-      <summary><span class="model-thumb"><span></span><span></span></span> Opções de costura</summary>
+      <summary><span class="model-thumb"><span></span><span></span></span> Placa de vidro empilhada</summary>
       <div class="model-toggle__body">
-
-        <p style="font-size:0.8rem; font-weight:600; margin:0 0 0.5rem;">Hoje: emenda reta, sem tratamento</p>
-        <div class="transition-demo">
-          <div class="transition-demo__half transition-demo__half--dark"></div>
-          <div class="transition-demo__half transition-demo__half--light"></div>
+        <div class="glassplate-demo">
+          <div class="glassplate glassplate--light glassplate--top">Hero — reto em cima</div>
+          <div class="glassplate glassplate--dark glassplate--mid">Seção do meio — arredondado nos dois cantos</div>
+          <div class="glassplate glassplate--light glassplate--mid">Outra seção do meio</div>
+          <div class="glassplate glassplate--dark glassplate--bottom">Rodapé — reto embaixo</div>
         </div>
-
-        <p style="font-size:0.8rem; font-weight:600; margin:1.5rem 0 0.5rem;">Opção A — clara (borda de vidro fosco branca em cima da parte preta)</p>
-        <div class="transition-demo">
-          <div class="transition-demo__half transition-demo__half--dark"></div>
-          <div class="transition-demo__half transition-demo__half--light"></div>
-          <div class="transition-demo__seam-glass"></div>
-        </div>
-
-        <p style="font-size:0.8rem; font-weight:600; margin:1.5rem 0 0.5rem;">Opção A — escura (borda de vidro fosco preta em cima da parte clara)</p>
-        <div class="transition-demo">
-          <div class="transition-demo__half transition-demo__half--dark"></div>
-          <div class="transition-demo__half transition-demo__half--light"></div>
-          <div class="transition-demo__seam-glass transition-demo__seam-glass--dark"></div>
-        </div>
-
-        <p style="font-size:0.8rem; font-weight:600; margin:1.5rem 0 0.5rem;">Opção B — brilho suave na costura</p>
-        <div class="transition-demo">
-          <div class="transition-demo__half transition-demo__half--dark"></div>
-          <div class="transition-demo__half transition-demo__half--light"></div>
-          <div class="transition-demo__seam-glow"></div>
-        </div>
-
-        <p style="font-size:0.8rem; font-weight:600; margin:1.5rem 0 0.5rem;">Opção C — degradê curto e completo na costura</p>
-        <div class="transition-demo">
-          <div class="transition-demo__half transition-demo__half--dark"></div>
-          <div class="transition-demo__half transition-demo__half--light"></div>
-          <div class="transition-demo__seam-gradient"></div>
-        </div>
-
-        <div class="note-flag">Nos três casos o fundo de cada metade continua 100% chapado (<code>#0A0A0A</code> / <code>#FAFAFA</code>) — só a linha da emenda ganha um tratamento extra, curto, por cima. Na Opção C o degradê vai de preto a branco por completo, mas só dentro dessa faixa curta — não é o fundo da seção virando degradê, é a própria emenda. Ainda em teste — não é regra oficial.</div>
-      </div>
-    </details>
-
-    <h3 class="sub-title" style="margin-top:2.5rem;">Em teste — Fundo de seção: estático, vidro e textura</h3>
-    <p style="font-size:0.85rem;">A regra de Alternância continua valendo pro tom base (sempre um dos dois chapados) — o que muda aqui é só uma camada por cima desse tom, não a cor em si. "Estático" é o que já temos hoje. "Vidro" acrescenta formas suaves desfocadas. "Textura" é uma terceira ideia: um grão bem sutil (tipo filme/papel), elegante e combina com o resto porque continua 100% P&B, sem textura óbvia de padrão repetido.</p>
-    <details class="model-toggle">
-      <summary><span class="model-thumb"><span></span><span></span></span> Estático, Vidro e Textura</summary>
-      <div class="model-toggle__body">
-
-        <p style="font-size:0.8rem; font-weight:600; margin:0 0 0.5rem;">Estático — escuro (padrão atual)</p>
-        <div class="section-bg-demo section-bg-demo--dark"></div>
-
-        <p style="font-size:0.8rem; font-weight:600; margin:1.5rem 0 0.5rem;">Estático — claro (padrão atual)</p>
-        <div class="section-bg-demo section-bg-demo--light"></div>
-
-        <p style="font-size:0.8rem; font-weight:600; margin:1.5rem 0 0.5rem;">Vidro — escuro (mesmo fundo chapado + formas desfocadas por cima)</p>
-        <div class="section-bg-demo section-bg-demo--dark section-bg-demo--glass">
-          <span class="section-bg-demo__blob" style="width:220px; height:220px; top:-60px; left:-40px;"></span>
-          <span class="section-bg-demo__blob" style="width:170px; height:170px; bottom:-50px; right:-20px;"></span>
-        </div>
-
-        <p style="font-size:0.8rem; font-weight:600; margin:1.5rem 0 0.5rem;">Vidro — claro</p>
-        <div class="section-bg-demo section-bg-demo--light section-bg-demo--glass">
-          <span class="section-bg-demo__blob" style="width:220px; height:220px; top:-60px; left:-40px;"></span>
-          <span class="section-bg-demo__blob" style="width:170px; height:170px; bottom:-50px; right:-20px;"></span>
-        </div>
-
-        <p style="font-size:0.8rem; font-weight:600; margin:1.5rem 0 0.5rem;">Textura — escuro (grão sutil)</p>
-        <div class="section-bg-demo section-bg-demo--dark section-bg-demo--grain"></div>
-
-        <p style="font-size:0.8rem; font-weight:600; margin:1.5rem 0 0.5rem;">Textura — claro (grão sutil)</p>
-        <div class="section-bg-demo section-bg-demo--light section-bg-demo--grain"></div>
-
-        <div class="note-flag">O tom de base (<code>#0A0A0A</code> / <code>#FAFAFA</code>) nunca muda nas três — é sempre uma camada bem sutil por cima, sem virar gradiente visível nem mudar o contraste do texto. Ainda em teste — não é regra oficial.</div>
+        <div class="note-flag">A cor que aparece nos cantinhos arredondados é o que está por trás de tudo (aqui, preto). Ainda em teste — não é regra oficial, e vamos elaborar mais essa ideia (espessura da borda, se tem alguma linha/brilho na borda do vidro etc.).</div>
       </div>
     </details>
 
