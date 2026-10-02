@@ -945,8 +945,8 @@
       radial-gradient(circle at 85% 95%, rgba(255,255,255,.14), transparent 24%);
   }
   .glassplate { position: relative; z-index: 1; padding: 2.5rem 1.5rem; text-align: center; font-size: 0.8rem; font-weight: 600; backdrop-filter: blur(26px); -webkit-backdrop-filter: blur(26px); box-shadow: inset 0 1px 0 rgba(255,255,255,.25); }
-  .glassplate--light { background: rgba(250,250,250,.78); color: #0a0a0a; }
-  .glassplate--dark { background: rgba(10,10,10,.68); color: #fafafa; box-shadow: inset 0 1px 0 rgba(255,255,255,.08); }
+  .glassplate--light { background: linear-gradient(160deg, rgba(255,255,255,.78) 0%, rgba(255,255,255,.4) 100%); color: #0a0a0a; box-shadow: inset 0 1px 0 rgba(255,255,255,.6); }
+  .glassplate--dark { background: linear-gradient(160deg, rgba(255,255,255,.12) 0%, rgba(255,255,255,.04) 100%); border: 1px solid rgba(255,255,255,.12); color: #fafafa; box-shadow: inset 0 1px 0 rgba(255,255,255,.15); }
   .glassplate--round-bottom { border-radius: 0 0 28px 28px; z-index: 2; margin-bottom: -28px; }
   .glassplate--round-both { border-radius: 28px; z-index: 2; margin-top: -28px; margin-bottom: -28px; }
   .glassplate--round-top { border-radius: 28px 28px 0 0; z-index: 2; margin-top: -28px; }
@@ -1516,14 +1516,14 @@
       <summary><span class="model-thumb"><span></span><span></span></span> Versão escura (placas escuras sobrepõem)</summary>
       <div class="model-toggle__body">
         <div class="glassplate-demo">
-          <div class="glassplate glassplate--light glassplate--flat">Hero — reto em cima (clara, reta)</div>
-          <div class="glassplate glassplate--dark glassplate--round-both">Seção 2 (escura, sobrepõe os dois lados)</div>
-          <div class="glassplate glassplate--light glassplate--flat">Seção 3 (clara, reta — fica embaixo)</div>
-          <div class="glassplate glassplate--dark glassplate--round-both">Seção 4 (escura, sobrepõe os dois lados)</div>
-          <div class="glassplate glassplate--light glassplate--flat">Seção 5 (clara, reta)</div>
-          <div class="glassplate glassplate--dark glassplate--round-top">Rodapé — reto embaixo (escura)</div>
+          <div class="glassplate glassplate--dark glassplate--round-bottom">Hero — reto em cima (escura)</div>
+          <div class="glassplate glassplate--light glassplate--flat">Seção 2 (clara, reta — fica embaixo)</div>
+          <div class="glassplate glassplate--dark glassplate--round-both">Seção 3 (escura, sobrepõe os dois lados)</div>
+          <div class="glassplate glassplate--light glassplate--flat">Seção 4 (clara, reta)</div>
+          <div class="glassplate glassplate--dark glassplate--round-both">Seção 5 (escura, sobrepõe os dois lados)</div>
+          <div class="glassplate glassplate--light glassplate--flat">Rodapé — reto embaixo (clara, reta)</div>
         </div>
-        <div class="note-flag">Mesma lógica invertida: toda placa escura arredonda e sobrepõe a clara vizinha, que fica sempre reta. Ainda em teste — não é regra oficial, e vamos elaborar mais essa ideia (espessura da borda, se tem alguma linha/brilho na borda do vidro etc.).</div>
+        <div class="note-flag">Mesma lógica invertida: aqui o Hero já começa escuro (tema invertido) e alterna a partir daí. Toda placa escura arredonda e sobrepõe a clara vizinha, que fica sempre reta. Ainda em teste — não é regra oficial, e vamos elaborar mais essa ideia (espessura da borda, se tem alguma linha/brilho na borda do vidro etc.).</div>
       </div>
     </details>
 
