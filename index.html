@@ -1065,6 +1065,23 @@
     .capt__arch .capt__spark--r { right: -16px; }
   }
   @media (max-width: 480px) { .capt__grid4 { grid-template-columns: 1fr; } }
+
+  /* Página de Obrigado com redirecionamento (pós-captura, leva ao grupo de WhatsApp) */
+  .capt .glassplate.redir { text-align: center; }
+  .redir__title { font-family: var(--font-display); font-weight: 500; font-size: 2.2rem; line-height: 1.1; margin: 0 0 0.5rem; color: #fafafa; }
+  .redir__sub { font-weight: 600; font-size: 1rem; margin: 0 0 1.5rem; color: #f2f2f2; }
+  .redir__progress { max-width: 460px; margin: 0 auto 1.75rem; height: 26px; border-radius: 999px; background: rgba(255,255,255,.18); overflow: hidden; border: 1px solid rgba(255,255,255,.2); }
+  .redir__progress-fill { width: 90%; height: 100%; border-radius: 999px; background: linear-gradient(90deg, #7f7f7f 0%, #fafafa 100%); display: flex; align-items: center; justify-content: flex-end; padding-right: 0.7rem; box-sizing: border-box; font-size: 0.7rem; font-weight: 700; color: #0a0a0a; }
+  .redir__step { font-family: var(--font-body); font-weight: 700; font-size: 1.5rem; line-height: 1.25; max-width: 15em; margin: 0 auto 1.5rem; color: #fafafa; }
+  .redir .card3d { max-width: 460px; margin: 0 auto; padding: 28px 24px; }
+  .redir__alert { font-family: var(--font-display); font-weight: 500; font-size: 1.7rem; margin: 0 0 0.75rem; color: #fafafa; }
+  .redir__text { font-size: 1rem; line-height: 1.6; margin: 0 0 1.4rem; color: #f2f2f2; }
+  .redir .btn-glass { display: flex; align-items: center; justify-content: center; gap: 0.5rem; width: 100%; box-sizing: border-box; font-size: 14px; padding: 15px 20px; }
+  .redir .btn-glass svg { width: 18px; height: 18px; flex-shrink: 0; }
+  .redir__wait { font-size: 0.95rem; line-height: 1.6; max-width: 30em; margin: 1.5rem auto 0.75rem; color: #f2f2f2; }
+  .redir__count { font-family: var(--font-display); font-weight: 600; font-size: 2.4rem; line-height: 1; margin: 0 0 0.6rem; color: #fafafa; }
+  .redir__hint { font-size: 0.9rem; margin: 0; color: #f2f2f2; }
+  .redir__copy { text-align: center; font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; margin: 0; color: #363534; }
 </style>
 
 <div class="sidebar">
@@ -2951,7 +2968,7 @@
           </div>
 
         </div>
-        <div class="note-flag">Só existe <strong>um botão que envia</strong>: o do formulário do Hero. Os outros "Quero participar" são âncora que rolam até ele. O formulário tem 3 campos (nome, e-mail, telefone), e o telefone pode sair se o objetivo for só e-mail. Fotos são placeholder cinza (<code>#595959</code>), a moldura em arco da dobra "Conheça" é o único elemento de formato diferente. Rodapé segue o Rodapé oficial (Formato 1 ou 2), aqui mostrado como placa final com o aviso legal em cima. Como na Placa de vidro, a versão clara é só espelhar (Hero claro, escuras e claras trocam de papel), e o número de dobras não é fixo.</div>
+        <div class="note-flag">Só existe <strong>um botão que envia</strong>: o do formulário do Hero. Os outros "Quero participar" são âncora que rolam até ele. O formulário tem 3 campos (nome, e-mail, telefone), e o telefone pode sair se o objetivo for só e-mail. Fotos são placeholder cinza (<code>#595959</code>), a moldura em arco da dobra "Conheça" é o único elemento de formato diferente. Rodapé segue o Rodapé oficial (Formato 1 ou 2), aqui mostrado como placa final com o aviso legal em cima. Como na Placa de vidro, a versão clara é só espelhar (Hero claro, escuras e claras trocam de papel), e o número de dobras não é fixo. Linka para: <strong>Página de Obrigado com redirecionamento</strong>.</div>
       </div>
     </details>
 
@@ -2959,7 +2976,53 @@
     </details>
 
     <details class="page-type-toggle">
-      <summary><span class="page-type-toggle__label"><span class="page-type-toggle__index">05</span><span class="page-type-toggle__title">Site Institucional</span></span><span class="page-type-toggle__status">Em construção</span></summary>
+      <summary><span class="page-type-toggle__label"><span class="page-type-toggle__index">05</span><span class="page-type-toggle__title">Página de Obrigado com redirecionamento</span></span></summary>
+      <div class="page-type-toggle__body">
+
+    <h3 class="sub-title" style="margin-top:0;">Passo final da captura — leva ao grupo de WhatsApp</h3>
+    <p style="font-size:0.85rem;">É uma função diferente da Página de Obrigado de compra (aquela entrega acesso à área de membros). Esta vem logo depois do formulário da Página de Captura e tem uma tarefa só: levar a pessoa pro grupo de WhatsApp, onde a isca é entregue. A barra em 90% passa a sensação de "quase lá" e segura a pessoa no último passo, e a contagem regressiva redireciona sozinha caso ela não clique.</p>
+    <details class="model-toggle">
+      <summary>Ver modelo</summary>
+      <div class="model-toggle__body">
+        <div class="glassplate-demo capt">
+
+          <div class="glassplate glassplate--dark glassplate--round-bottom redir">
+            <p class="redir__title">Nome da isca</p>
+            <p class="redir__sub">Subtítulo ou nome do evento</p>
+            <div class="redir__progress"><div class="redir__progress-fill">90%</div></div>
+            <p class="redir__step">Falta só 1 passo pra concluir o seu cadastro</p>
+            <div class="card3d card3d--dark">
+              <p class="redir__alert">Atenção!</p>
+              <p class="redir__text">Pra ter acesso à isca, é necessário que você <strong>entre no grupo oficial do WhatsApp.</strong></p>
+              <a class="btn-glass btn-glass--verde" href="#" onclick="return false;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>ENTRAR NO GRUPO DO WHATSAPP</a>
+            </div>
+            <p class="redir__wait">Ou aguarde alguns segundos pra ser redirecionada pro grupo <strong>exclusivo</strong> do WhatsApp.</p>
+            <p class="redir__count" id="redir-count">7</p>
+            <p class="redir__hint">Na próxima tela, aperte <strong>"Entrar na conversa"</strong>.</p>
+          </div>
+
+          <div class="glassplate glassplate--light glassplate--flat">
+            <p class="redir__copy">© Ano Nome da Marca · Todos os direitos reservados</p>
+          </div>
+
+        </div>
+        <div class="note-flag">Só existe <strong>um botão</strong>, o do WhatsApp, e a contagem regressiva (7 segundos, aqui rodando em loop só pra demonstrar) faz o mesmo trabalho sozinha ao chegar em 0. A barra de progresso é sempre em 90%, nunca 100%, pra indicar que ainda falta o passo. O texto da próxima tela ("Entrar na conversa") evita que a pessoa trave no aviso do próprio WhatsApp. Rodapé reduzido a só o copyright, de propósito: nesta página nada deve tirar a pessoa do caminho. Linka para: <strong>grupo de WhatsApp</strong>.</div>
+      </div>
+    </details>
+    <script>
+      (function () {
+        var el = document.getElementById('redir-count');
+        if (!el) return;
+        var n = 7;
+        setInterval(function () { n = n > 0 ? n - 1 : 7; el.textContent = n; }, 1000);
+      })();
+    </script>
+
+      </div>
+    </details>
+
+    <details class="page-type-toggle">
+      <summary><span class="page-type-toggle__label"><span class="page-type-toggle__index">06</span><span class="page-type-toggle__title">Site Institucional</span></span><span class="page-type-toggle__status">Em construção</span></summary>
       <div class="page-type-toggle__body">
         <div class="note-flag" style="margin-top:0;">Hero e estrutura ainda não definidos — apresentação da marca/negócio, sem foco em uma oferta específica.</div>
       </div>
