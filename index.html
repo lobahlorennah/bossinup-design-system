@@ -2814,6 +2814,10 @@
       <summary><span class="page-type-toggle__label"><span class="page-type-toggle__index">02</span><span class="page-type-toggle__title">Página de Obrigado</span></span></summary>
       <div class="page-type-toggle__body">
 
+    <details class="category-toggle">
+      <summary>Obrigado de compra (área de membros)</summary>
+      <div class="category-toggle__body">
+
     <h3 class="sub-title" style="margin-top:0;">Hero — Acesso à área de membros (real)</h3>
     <p style="font-size:0.85rem;">Faixa de alerta + bloco de login (fictício, os dados chegam por e-mail) + imagem/gráfico da marca do lado. O vermelho da faixa é <strong>uma exceção pontual</strong>, não faz parte da paleta catalogada — só existe aqui, nesse alerta específico. Onde entraria a imagem real, o mesmo degradê cinza usado nos outros heros.</p>
     <details class="model-toggle">
@@ -2840,6 +2844,56 @@
       </div>
     </details>
     <div class="note-flag">Rodapé: usa o mesmo Rodapé oficial já documentado em Página de Vendas — não repetido aqui.</div>
+
+      </div>
+    </details>
+
+    <details class="category-toggle">
+      <summary>Obrigado da captura (redirecionamento)</summary>
+      <div class="category-toggle__body">
+
+    <h3 class="sub-title" style="margin-top:0;">Passo final da captura — leva ao grupo de WhatsApp</h3>
+    <p style="font-size:0.85rem;">É uma função diferente da Página de Obrigado de compra (aquela entrega acesso à área de membros). Esta vem logo depois do formulário da Página de Captura e tem uma tarefa só: levar a pessoa pro grupo de WhatsApp, onde a isca é entregue. A barra em 90% passa a sensação de "quase lá" e segura a pessoa no último passo, e a contagem regressiva redireciona sozinha caso ela não clique.</p>
+    <details class="model-toggle">
+      <summary>Ver modelo</summary>
+      <div class="model-toggle__body">
+        <div class="glassplate-demo capt">
+
+          <div class="glassplate glassplate--dark glassplate--round-bottom redir">
+            <p class="redir__title">Nome da isca</p>
+            <p class="redir__sub">Subtítulo ou nome do evento</p>
+            <div class="redir__progress"><div class="redir__progress-fill">90%</div></div>
+            <p class="redir__step">Falta só 1 passo pra concluir o seu cadastro</p>
+            <div class="card3d card3d--dark">
+              <p class="redir__alert">Atenção!</p>
+              <p class="redir__text">Pra ter acesso à isca, é necessário que você <strong>entre no grupo oficial do WhatsApp.</strong></p>
+              <a class="btn-glass btn-glass--verde" href="#" onclick="return false;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>ENTRAR NO GRUPO DO WHATSAPP</a>
+            </div>
+            <p class="redir__wait">Ou aguarde alguns segundos pra ser redirecionada pro grupo <strong>exclusivo</strong> do WhatsApp.</p>
+            <p class="redir__count" id="redir-count">7</p>
+            <p class="redir__hint">Na próxima tela, aperte <strong>"Entrar na conversa"</strong>.</p>
+          </div>
+
+          <div class="glassplate glassplate--light glassplate--flat">
+            <p class="redir__copy">© Ano Nome da Marca · Todos os direitos reservados</p>
+          </div>
+
+        </div>
+        <div class="note-flag">Só existe <strong>um botão</strong>, o do WhatsApp, e a contagem regressiva (7 segundos, aqui rodando em loop só pra demonstrar) faz o mesmo trabalho sozinha ao chegar em 0. A barra de progresso é sempre em 90%, nunca 100%, pra indicar que ainda falta o passo. O texto da próxima tela ("Entrar na conversa") evita que a pessoa trave no aviso do próprio WhatsApp. Rodapé reduzido a só o copyright, de propósito: nesta página nada deve tirar a pessoa do caminho. Linka para: <strong>grupo de WhatsApp</strong>.</div>
+      </div>
+    </details>
+    <script>
+      (function () {
+        var el = document.getElementById('redir-count');
+        if (!el) return;
+        var n = 7;
+        setInterval(function () { n = n > 0 ? n - 1 : 7; el.textContent = n; }, 1000);
+      })();
+    </script>
+
+
+      </div>
+    </details>
 
       </div>
     </details>
@@ -2976,53 +3030,7 @@
     </details>
 
     <details class="page-type-toggle">
-      <summary><span class="page-type-toggle__label"><span class="page-type-toggle__index">05</span><span class="page-type-toggle__title">Página de Obrigado com redirecionamento</span></span></summary>
-      <div class="page-type-toggle__body">
-
-    <h3 class="sub-title" style="margin-top:0;">Passo final da captura — leva ao grupo de WhatsApp</h3>
-    <p style="font-size:0.85rem;">É uma função diferente da Página de Obrigado de compra (aquela entrega acesso à área de membros). Esta vem logo depois do formulário da Página de Captura e tem uma tarefa só: levar a pessoa pro grupo de WhatsApp, onde a isca é entregue. A barra em 90% passa a sensação de "quase lá" e segura a pessoa no último passo, e a contagem regressiva redireciona sozinha caso ela não clique.</p>
-    <details class="model-toggle">
-      <summary>Ver modelo</summary>
-      <div class="model-toggle__body">
-        <div class="glassplate-demo capt">
-
-          <div class="glassplate glassplate--dark glassplate--round-bottom redir">
-            <p class="redir__title">Nome da isca</p>
-            <p class="redir__sub">Subtítulo ou nome do evento</p>
-            <div class="redir__progress"><div class="redir__progress-fill">90%</div></div>
-            <p class="redir__step">Falta só 1 passo pra concluir o seu cadastro</p>
-            <div class="card3d card3d--dark">
-              <p class="redir__alert">Atenção!</p>
-              <p class="redir__text">Pra ter acesso à isca, é necessário que você <strong>entre no grupo oficial do WhatsApp.</strong></p>
-              <a class="btn-glass btn-glass--verde" href="#" onclick="return false;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>ENTRAR NO GRUPO DO WHATSAPP</a>
-            </div>
-            <p class="redir__wait">Ou aguarde alguns segundos pra ser redirecionada pro grupo <strong>exclusivo</strong> do WhatsApp.</p>
-            <p class="redir__count" id="redir-count">7</p>
-            <p class="redir__hint">Na próxima tela, aperte <strong>"Entrar na conversa"</strong>.</p>
-          </div>
-
-          <div class="glassplate glassplate--light glassplate--flat">
-            <p class="redir__copy">© Ano Nome da Marca · Todos os direitos reservados</p>
-          </div>
-
-        </div>
-        <div class="note-flag">Só existe <strong>um botão</strong>, o do WhatsApp, e a contagem regressiva (7 segundos, aqui rodando em loop só pra demonstrar) faz o mesmo trabalho sozinha ao chegar em 0. A barra de progresso é sempre em 90%, nunca 100%, pra indicar que ainda falta o passo. O texto da próxima tela ("Entrar na conversa") evita que a pessoa trave no aviso do próprio WhatsApp. Rodapé reduzido a só o copyright, de propósito: nesta página nada deve tirar a pessoa do caminho. Linka para: <strong>grupo de WhatsApp</strong>.</div>
-      </div>
-    </details>
-    <script>
-      (function () {
-        var el = document.getElementById('redir-count');
-        if (!el) return;
-        var n = 7;
-        setInterval(function () { n = n > 0 ? n - 1 : 7; el.textContent = n; }, 1000);
-      })();
-    </script>
-
-      </div>
-    </details>
-
-    <details class="page-type-toggle">
-      <summary><span class="page-type-toggle__label"><span class="page-type-toggle__index">06</span><span class="page-type-toggle__title">Site Institucional</span></span><span class="page-type-toggle__status">Em construção</span></summary>
+      <summary><span class="page-type-toggle__label"><span class="page-type-toggle__index">05</span><span class="page-type-toggle__title">Site Institucional</span></span><span class="page-type-toggle__status">Em construção</span></summary>
       <div class="page-type-toggle__body">
         <div class="note-flag" style="margin-top:0;">Hero e estrutura ainda não definidos — apresentação da marca/negócio, sem foco em uma oferta específica.</div>
       </div>
