@@ -1021,7 +1021,7 @@
   .capt__chip svg { width: 14px; height: 14px; flex-shrink: 0; }
   .capt__form { display: flex; flex-direction: column; gap: 0.7rem; max-width: 460px; }
   .capt__row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 0.7rem; }
-  .capt__field { width: 100%; box-sizing: border-box; background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.25); border-radius: 8px; padding: 0.85rem 1rem; font-family: var(--font-body); font-size: 0.82rem; color: #fafafa; backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); box-shadow: inset 0 1px 0 rgba(255,255,255,.15); outline: none; }
+  .capt__field { width: 100%; box-sizing: border-box; background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.25); border-radius: 8px; padding: 0.85rem 1rem; min-height: 48px; font-family: var(--font-body); font-size: 1rem; color: #fafafa; backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); box-shadow: inset 0 1px 0 rgba(255,255,255,.15); outline: none; }
   .capt__field::placeholder { color: #a5a5a5; }
   .capt__field:focus { border-color: rgba(255,255,255,.6); }
   .capt__form .btn-glass { width: 100%; box-sizing: border-box; text-align: center; font-size: 14px; padding: 14px 26px; cursor: pointer; }
@@ -1447,7 +1447,7 @@
       <div class="note-flag">Aplicada via Canva. Nesta prévia, aproximação com Parisienne pra visualização.</div>
     </div>
 
-    <div class="note-flag" style="margin-top:2.5rem;">A escala de tamanho por papel (título hero, subtítulo, corpo etc.) é específica de site (tem versão desktop e mobile) — documentada na seção <strong>Sites</strong>, não aqui.</div>
+    <div class="note-flag" style="margin-top:2.5rem;">A escala de tamanho por papel (título hero, subtítulo, corpo etc.) é específica de site (tem versão celular, tablet e desktop) — documentada na seção <strong>Sites</strong>, não aqui.</div>
   </section>
 
   <section id="espacamento">
@@ -1461,6 +1461,7 @@
     <div class="space-row"><span class="space-label">30px</span><div class="space-bar-track"><div class="space-bar" style="width:30px;"></div></div></div>
     <div class="space-row"><span class="space-label">40px</span><div class="space-bar-track"><div class="space-bar" style="width:40px;"></div></div></div>
     <div class="space-row"><span class="space-label">60px</span><div class="space-bar-track"><div class="space-bar" style="width:60px;"></div></div></div>
+    <div class="note-flag" style="margin-top:1.25rem;">Margem lateral, respiro entre seções e largura de container por dispositivo (celular, tablet, desktop) estão em <strong>Sites</strong>, em "Margens, larguras e espaço" — todos os valores saem desta escala.</div>
 
   </section>
 
@@ -1587,21 +1588,78 @@
       </div>
     </details>
 
-    <h3 class="sub-title" style="margin-top:2.5rem;">Escala de tamanho</h3>
-    <p style="font-size:0.9rem;">Tamanho de fonte por papel, específico de site (por isso tem coluna Desktop e Mobile) — não se aplica a Ebooks, Instagram ou Aplicativos, que têm suas próprias telas/escalas.</p>
+    <h3 class="sub-title" style="margin-top:2.5rem;">Breakpoints</h3>
+    <p style="font-size:0.9rem;">O site é construído <strong>mobile-first</strong>: o CSS base é o celular, e as faixas maiores só acrescentam (<code>min-width</code>). Três faixas, com os valores padrão de mercado (celular de 375px de referência, tablet na largura do iPad em pé, desktop no notebook).</p>
     <div class="table-scroll">
       <table class="scale-table">
-        <thead><tr><th>Papel</th><th>Desktop</th><th>Mobile</th><th>Fonte</th></tr></thead>
+        <thead><tr><th>Faixa</th><th>Largura</th><th>Testar em</th><th>O que muda</th></tr></thead>
         <tbody>
-          <tr><td>Título hero</td><td>60px</td><td>38px</td><td>The Seasons</td></tr>
-          <tr><td>Título de seção</td><td>40px</td><td>28px</td><td>The Seasons</td></tr>
-          <tr><td>Subtítulo</td><td>35px</td><td>24px</td><td>The Seasons</td></tr>
-          <tr><td>Destaque de preço/CTA</td><td>25px</td><td>20px</td><td>Montserrat</td></tr>
-          <tr><td>Categoria (REFLEXÕES etc.)</td><td>19px</td><td>17px</td><td>Montserrat 600</td></tr>
-          <tr><td>Corpo</td><td>17px</td><td>16px</td><td>Montserrat</td></tr>
+          <tr><td>Celular</td><td>até 767px</td><td>375px</td><td>Base. 1 coluna, margem lateral 20px, botão principal na largura toda</td></tr>
+          <tr><td>Tablet</td><td>768px a 1023px</td><td>768px</td><td>2 colunas, margem lateral 30px, fontes um degrau acima</td></tr>
+          <tr><td>Desktop</td><td>1024px ou mais</td><td>1024px e 1440px</td><td>3 colunas (4 só em cards curtos com ícone), margem lateral 40px, container de 1200px</td></tr>
         </tbody>
       </table>
     </div>
+    <div class="note-flag">Acima de 1440px nada cresce: o container fica em 1200px centralizado. Variáveis CSS não funcionam dentro de <code>@media</code>, então os valores 768px e 1024px entram direto no código (os tokens prontos estão na seção Tokens CSS).</div>
+
+    <h3 class="sub-title" style="margin-top:2.5rem;">Escala de tamanho</h3>
+    <p style="font-size:0.9rem;">Tamanho de fonte por papel e por dispositivo, específico de site — não se aplica a Ebooks, Instagram ou Aplicativos, que têm suas próprias telas/escalas.</p>
+    <div class="table-scroll">
+      <table class="scale-table">
+        <thead><tr><th>Papel</th><th>Celular</th><th>Tablet</th><th>Desktop</th><th>Fonte</th><th>Altura da linha</th></tr></thead>
+        <tbody>
+          <tr><td>Título hero</td><td>34px</td><td>44px</td><td>52px</td><td>The Seasons</td><td>1,1</td></tr>
+          <tr><td>Título de seção</td><td>26px</td><td>30px</td><td>34px</td><td>The Seasons</td><td>1,2</td></tr>
+          <tr><td>Subtítulo</td><td>22px</td><td>25px</td><td>28px</td><td>The Seasons</td><td>1,25</td></tr>
+          <tr><td>Citação em destaque</td><td>20px</td><td>21px</td><td>22px</td><td>The Seasons itálico</td><td>1,45</td></tr>
+          <tr><td>Preço (número principal)</td><td>40px</td><td>48px</td><td>52px</td><td>The Seasons 600</td><td>1,1</td></tr>
+          <tr><td>Corpo</td><td>16px</td><td>16px</td><td>17px</td><td>Montserrat</td><td>1,65</td></tr>
+          <tr><td>Título de card</td><td>16px</td><td>16px</td><td>16px</td><td>Montserrat 700</td><td>1,35</td></tr>
+          <tr><td>Texto de card, FAQ, listas</td><td>15px</td><td>15px</td><td>15px</td><td>Montserrat</td><td>1,6</td></tr>
+          <tr><td>Botão</td><td>15px</td><td>16px</td><td>17px</td><td>Poppins 500</td><td>1,2</td></tr>
+          <tr><td>Rótulo em caixa alta (categoria, selo)</td><td>13px</td><td>13px</td><td>13px</td><td>Montserrat 600, espaçamento +8%</td><td>1,3</td></tr>
+          <tr><td>Texto legal e de apoio</td><td>13px</td><td>13px</td><td>13px</td><td>Montserrat</td><td>1,6</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="note-flag"><strong>Regras de texto (padrão de mercado):</strong> corpo nunca abaixo de <strong>16px</strong> no celular (abaixo disso o iPhone dá zoom sozinho nos campos e o texto cansa); nada de texto abaixo de <strong>12px</strong>; altura de linha do corpo entre 1,5 e 1,75 e dos títulos entre 1,1 e 1,25; linha de <strong>45 a 75 caracteres</strong> no desktop e 35 a 60 no celular (por isso a coluna de texto corrido não passa de 600px); famílias de fonte: The Seasons nos títulos, Montserrat no resto, Poppins só no botão e Halimun/Parisienne só no script.</div>
+
+    <h3 class="sub-title" style="margin-top:2.5rem;">Margens, larguras e espaço</h3>
+    <p style="font-size:0.9rem;">Todos os valores saem da escala de espaçamento já catalogada (5, 10, 15, 20, 30, 40, 60), nada inventado.</p>
+    <div class="table-scroll">
+      <table class="scale-table">
+        <thead><tr><th>Item</th><th>Celular</th><th>Tablet</th><th>Desktop</th></tr></thead>
+        <tbody>
+          <tr><td>Margem lateral (borda da tela até o conteúdo)</td><td>20px</td><td>30px</td><td>40px</td></tr>
+          <tr><td>Respiro vertical de cada seção (em cima e embaixo)</td><td>40px</td><td>60px</td><td>60px</td></tr>
+          <tr><td>Largura máxima do container</td><td>100%</td><td>100%</td><td>1200px, centralizado</td></tr>
+          <tr><td>Coluna de texto corrido</td><td>100%</td><td>até 600px</td><td>até 600px</td></tr>
+          <tr><td>Colunas de grade (cards)</td><td>1</td><td>2</td><td>3 (4 só em cards curtos com ícone)</td></tr>
+          <tr><td>Espaço entre cards</td><td>15px</td><td>20px</td><td>20px</td></tr>
+          <tr><td>Padding interno do card</td><td>20px</td><td>30px</td><td>30px</td></tr>
+          <tr><td>Raio do card</td><td>20px</td><td>20px</td><td>20px</td></tr>
+          <tr><td>Raio da placa de vidro</td><td>20px</td><td>28px</td><td>28px</td></tr>
+          <tr><td>Altura mínima do hero</td><td>560px</td><td>600px</td><td>640px</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="note-flag"><strong>Larguras de componente</strong> (centralizados dentro do container): preço 480px, garantia 680px, FAQ 760px, aviso legal do rodapé 620px.</div>
+
+    <h3 class="sub-title" style="margin-top:2.5rem;">Toque, formulário e construção</h3>
+    <div class="rules-card">
+      <ul>
+        <li><strong>Alvo de toque:</strong> mínimo de <strong>44×44px</strong> (Apple) / 48px (Material) em tudo que clica, com pelo menos 8px entre um alvo e outro. Ícone pequeno ganha área de toque maior com padding, sem crescer visualmente. Botão oficial (15px de padding + texto) já passa.</li>
+        <li><strong>Campo de formulário:</strong> altura mínima de <strong>48px</strong> e fonte de <strong>16px ou mais</strong> no celular (com menos, o iPhone dá zoom ao tocar). Usar o tipo certo (<code>email</code>, <code>tel</code>) pra abrir o teclado certo.</li>
+        <li><strong>Botão principal no celular:</strong> ocupa a largura toda do container.</li>
+        <li><strong>Sem rolagem lateral</strong> em nenhuma largura. Testar em 375px, 768px, 1024px e 1440px antes de publicar.</li>
+        <li><strong>Viewport:</strong> <code>width=device-width, initial-scale=1</code>, nunca bloquear o zoom da pessoa.</li>
+        <li><strong>Imagens:</strong> sempre com largura e altura (ou <code>aspect-ratio</code>) declaradas pra a página não pular enquanto carrega; só a primeira dobra carrega na hora, o resto <code>loading="lazy"</code>.</li>
+        <li><strong>Fontes:</strong> carregar só os pesos que a página usa, com <code>font-display: swap</code> pra o texto aparecer mesmo antes da fonte chegar.</li>
+        <li><strong>Alturas:</strong> preferir <code>min-height</code> a altura fixa, e <code>dvh</code> no lugar de <code>vh</code> pra o celular não cortar o hero atrás da barra do navegador.</li>
+        <li><strong>Contraste:</strong> texto normal com contraste mínimo de 4,5:1 sobre o fundo (já garantido pelos dois fundos chapados, vale conferir sobre foto).</li>
+      </ul>
+    </div>
+    <div class="note-flag">Base: Apple Human Interface Guidelines e Material Design (alvo de toque), WCAG 2.2 (contraste e zoom), breakpoints padrão 768/1024 e medida de linha de 45 a 75 caracteres (tipografia clássica). O site real (<code>bossingrow-dinheiro</code>) hoje troca de layout em 760px e usa container de 1080px, e deve ser alinhado a 768px e 1200px na próxima revisão.</div>
 
     <h3 class="sub-title" style="margin-top:2.5rem;">Tipos de página</h3>
     <p style="font-size:0.9rem;">O hero e a estrutura mudam de um tipo de página pro outro — o que se repete entre eles são só as peças já catalogadas (botão, card 3D, formatos de preço, rodapé).</p>
@@ -3318,6 +3376,45 @@
   /* Raio */
   --radius-btn: 25px;
   --radius-card: 12px;
+
+  /* Layout de site (celular é a base, sobe com min-width) */
+  --gutter: 20px;            /* margem lateral */
+  --section-y: 40px;         /* respiro vertical de cada seção */
+  --container: 1200px;       /* largura máxima, centralizado */
+  --measure: 600px;          /* coluna de texto corrido */
+  --radius-plate: 20px;      /* placa de vidro */
+
+  /* Tamanho de fonte por papel (celular) */
+  --fs-hero: 34px;
+  --fs-section: 26px;
+  --fs-sub: 22px;
+  --fs-body: 16px;
+  --fs-button: 15px;
+}
+
+/* Tablet: a partir de 768px */
+@media (min-width: 768px) {
+  :root {
+    --gutter: 30px;
+    --section-y: 60px;
+    --radius-plate: 28px;
+    --fs-hero: 44px;
+    --fs-section: 30px;
+    --fs-sub: 25px;
+    --fs-button: 16px;
+  }
+}
+
+/* Desktop: a partir de 1024px (acima de 1440px nada cresce) */
+@media (min-width: 1024px) {
+  :root {
+    --gutter: 40px;
+    --fs-hero: 52px;
+    --fs-section: 34px;
+    --fs-sub: 28px;
+    --fs-body: 17px;
+    --fs-button: 17px;
+  }
 }</pre>
     </div>
   </section>
@@ -3337,6 +3434,9 @@
       <li><span class="box"></span>Se foi verificado o design system completo antes de tomar decisões</li>
       <li><span class="box"></span>Emoji só aparece em cards (ex. Instagram), nunca como ícone de interface ou no meio do texto</li>
       <li><span class="box"></span>Vidro fosco só onde faz sentido (botão, card, selo) — não em logo/marca</li>
+      <li><span class="box"></span>Site: fontes seguem a escala por dispositivo (celular, tablet, desktop) e o corpo nunca fica abaixo de 16px no celular</li>
+      <li><span class="box"></span>Site: margem lateral 20/30/40px e container de no máximo 1200px, sem rolagem lateral em 375, 768, 1024 e 1440px</li>
+      <li><span class="box"></span>Site: alvos de toque de pelo menos 44px e campos de formulário com 48px de altura e fonte de 16px ou mais</li>
     </ul>
   </section>
 
