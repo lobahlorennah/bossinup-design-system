@@ -563,8 +563,8 @@
   .card3d { border-radius: 20px; padding: 30px; }
   .card3d--light {
     background: linear-gradient(160deg, rgba(255,255,255,.75) 0%, rgba(255,255,255,.35) 100%);
-    border: 1px solid rgba(10,10,10,.14);
-    box-shadow: 0 10px 26px rgba(0,0,0,.18), inset 0 1px 0 rgba(255,255,255,.9);
+    border: 1px solid rgba(10,10,10,.2);
+    box-shadow: 0 10px 26px rgba(0,0,0,.18), 0 1px 3px rgba(0,0,0,.1), inset 0 1px 0 #fff, inset 0 -1px 0 rgba(255,255,255,.7), inset 0 0 0 1px rgba(255,255,255,.5);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     color: #0a0a0a;
@@ -917,12 +917,13 @@
       radial-gradient(circle at 25% 92%, rgba(255,255,255,.24), transparent 26%),
       radial-gradient(circle at 85% 95%, rgba(255,255,255,.14), transparent 24%);
   }
-  .glassplate { position: relative; z-index: 1; padding: 2.5rem 1.5rem; text-align: center; font-size: 0.8rem; font-weight: 600; backdrop-filter: blur(26px); -webkit-backdrop-filter: blur(26px); box-shadow: inset 0 1px 0 rgba(255,255,255,.25); }
-  .glassplate--light { background: rgba(250,250,250,.85); color: #0a0a0a; }
-  .glassplate--dark { background: rgba(10,10,10,.85); color: #fafafa; }
-  .glassplate--round-bottom { border-radius: 0 0 28px 28px; z-index: 2; margin-bottom: -28px; }
-  .glassplate--round-both { border-radius: 28px; z-index: 2; margin-top: -28px; margin-bottom: -28px; }
-  .glassplate--round-top { border-radius: 28px 28px 0 0; z-index: 2; margin-top: -28px; }
+  .glassplate { position: relative; z-index: 1; padding: 2.5rem 1.5rem; text-align: center; font-size: 0.8rem; font-weight: 600; backdrop-filter: blur(26px); -webkit-backdrop-filter: blur(26px); }
+  .glassplate--light { background: rgba(250,250,250,.85); color: #0a0a0a; --plate-border: rgba(10,10,10,.2); --plate-drop: rgba(0,0,0,.2); --plate-glow: 0 0 0 rgba(0,0,0,0); --plate-hl: inset 0 1px 0 #fff, inset 0 -1px 0 rgba(255,255,255,.7); }
+  .glassplate--dark { background: rgba(10,10,10,.85); color: #fafafa; --plate-border: rgba(255,255,255,.3); --plate-drop: rgba(0,0,0,.5); --plate-glow: 0 0 50px rgba(255,255,255,.08); --plate-hl: inset 0 1px 0 rgba(255,255,255,.35), inset 0 -1px 0 rgba(255,255,255,.18); }
+  /* Borda e luz só na curva (sem linha lateral): o fio acompanha o arredondado e some nas pontas, igual ao Card 3D */
+  .glassplate--round-bottom { border-radius: 0 0 28px 28px; z-index: 2; margin-bottom: -28px; border-bottom: 1px solid var(--plate-border); box-shadow: 0 10px 24px var(--plate-drop), var(--plate-glow), var(--plate-hl); }
+  .glassplate--round-both { border-radius: 28px; z-index: 2; margin-top: -28px; margin-bottom: -28px; border-top: 1px solid var(--plate-border); border-bottom: 1px solid var(--plate-border); box-shadow: 0 0 26px var(--plate-drop), var(--plate-glow), var(--plate-hl); }
+  .glassplate--round-top { border-radius: 28px 28px 0 0; z-index: 2; margin-top: -28px; border-top: 1px solid var(--plate-border); box-shadow: 0 -10px 24px var(--plate-drop), var(--plate-glow), var(--plate-hl); }
   .glassplate--flat { border-radius: 0; z-index: 1; }
 
   .free-demo { border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; margin-bottom: 0.75rem; }
@@ -1562,7 +1563,7 @@
           <div class="glassplate glassplate--light glassplate--flat">Seção 6 (clara, reta)</div>
           <div class="glassplate glassplate--dark glassplate--round-top">Rodapé — reto embaixo (escura)</div>
         </div>
-        <div class="note-flag">Exatamente o espelho da versão clara: mesmos tons, mesma sobreposição, só invertendo qual lado arredonda — aqui o Hero já começa escuro. Essa versão tem uma seção a mais de propósito: a quantidade de seções <strong>não é fixa</strong>, a página pode ter quantas precisar, sempre alternando. <strong>Validado:</strong> a placa de vidro é a direção pra costura/fundo. Segue em refinamento (espessura da borda, se tem alguma linha/brilho na borda do vidro etc.).</div>
+        <div class="note-flag">Exatamente o espelho da versão clara: mesmos tons, mesma sobreposição, só invertendo qual lado arredonda — aqui o Hero já começa escuro. Essa versão tem uma seção a mais de propósito: a quantidade de seções <strong>não é fixa</strong>, a página pode ter quantas precisar, sempre alternando. <strong>Validado:</strong> a placa de vidro é a direção pra costura/fundo. <strong>Acabamento da borda:</strong> as placas que sobrepõem têm um fio de 1px só na curva (sem linha lateral) que some nas pontas, brilho interno no topo e sombra projetada na placa vizinha, o mesmo acabamento do Card 3D. Placa clara: fio escuro a 20% e brilho branco. Placa escura: fio branco a 30% e leve halo.</div>
       </div>
     </details>
 
