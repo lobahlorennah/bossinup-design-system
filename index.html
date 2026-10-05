@@ -1082,6 +1082,14 @@
   .redir__count { font-family: var(--font-display); font-weight: 600; font-size: 2.4rem; line-height: 1; margin: 0 0 0.6rem; color: #fafafa; }
   .redir__hint { font-size: 0.9rem; margin: 0; color: #f2f2f2; }
   .redir__copy { text-align: center; font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; margin: 0; color: #363534; }
+
+  /* Catálogo de ícones (Logos) */
+  .icon-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(104px, 1fr)); gap: 0.7rem; margin: 0.75rem 0 1rem; }
+  .icon-tile { display: flex; flex-direction: column; align-items: center; gap: 0.55rem; padding: 1rem 0.4rem 0.8rem; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; color: var(--text); font: inherit; cursor: pointer; }
+  .icon-tile:hover { border-color: var(--border-strong); }
+  .icon-tile svg { width: 28px; height: 28px; }
+  .icon-tile__name { font-size: 0.7rem; color: var(--text-secondary); }
+  .icon-tile__tag { font-size: 0.58rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-tertiary); }
 </style>
 
 <div class="sidebar">
@@ -1368,6 +1376,59 @@
         <li><strong>Área de proteção:</strong> manter ao redor do logo um espaço livre de pelo menos a altura da estrela do monograma — nada de texto ou outro elemento colado nele.</li>
         <li><strong>Nunca recolorir</strong> fora dos 7 tons da escala — não usar a logo nas cores complementares (Poder/Liberdade/Tranquilidade).</li>
         <li><strong>Nunca distorcer</strong> a proporção — redimensionar sempre com as duas dimensões travadas juntas.</li>
+      </ul>
+    </div>
+
+    <h3 class="sub-title" style="margin-top:2.5rem;">Ícones</h3>
+    <p style="font-size:0.9rem;">Dois grupos, cada um com a sua regra: <strong>interface</strong> (setas, check, calendário etc., sempre Lucide) e <strong>redes sociais</strong> (logos de marca, que o Lucide não cobre). Clique num ícone pra copiar o SVG pronto.</p>
+
+    <h4 style="margin:1.5rem 0 0.6rem; font-size:0.85rem;">Interface — Lucide (pacote padrão)</h4>
+    <div class="icon-grid">
+      <button class="icon-tile" type="button" onclick="copyIcon(this)"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span class="icon-tile__name">check</span></button>
+      <button class="icon-tile" type="button" onclick="copyIcon(this)"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg><span class="icon-tile__name">chevron-down</span></button>
+      <button class="icon-tile" type="button" onclick="copyIcon(this)"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg><span class="icon-tile__name">chevron-up</span></button>
+      <button class="icon-tile" type="button" onclick="copyIcon(this)"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg><span class="icon-tile__name">chevron-right</span></button>
+      <button class="icon-tile" type="button" onclick="copyIcon(this)"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/></svg><span class="icon-tile__name">calendar</span></button>
+      <button class="icon-tile" type="button" onclick="copyIcon(this)"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span class="icon-tile__name">clock</span></button>
+      <button class="icon-tile" type="button" onclick="copyIcon(this)"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5"/><rect x="2" y="6" width="14" height="12" rx="2"/></svg><span class="icon-tile__name">video</span></button>
+      <button class="icon-tile" type="button" onclick="copyIcon(this)"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><span class="icon-tile__name">star</span></button>
+      <button class="icon-tile" type="button" onclick="copyIcon(this)"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg><span class="icon-tile__name">bookmark</span></button>
+      <button class="icon-tile" type="button" onclick="copyIcon(this)"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg><span class="icon-tile__name">zap</span></button>
+      <button class="icon-tile" type="button" onclick="copyIcon(this)"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg><span class="icon-tile__name">target</span></button>
+      <button class="icon-tile" type="button" onclick="copyIcon(this)"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></svg><span class="icon-tile__name">sparkle</span></button>
+      <button class="icon-tile" type="button" onclick="copyIcon(this)"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg><span class="icon-tile__name">message-circle</span></button>
+      <button class="icon-tile" type="button" onclick="copyIcon(this)"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><span class="icon-tile__name">message-square</span></button>
+      <button class="icon-tile" type="button" onclick="copyIcon(this)"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg><span class="icon-tile__name">activity</span></button>
+    </div>
+    <div class="rules-card">
+      <h4 style="margin:0 0 0.8rem; font-size:0.85rem;">Regras dos ícones de interface</h4>
+      <ul>
+        <li><strong>Sempre Lucide</strong> (<code>lucide.dev</code>). Se precisar de um ícone que não está aqui, buscar pelo nome lá e manter o mesmo estilo. Nunca outro pacote, nunca emoji, nunca imagem de ícone.</li>
+        <li><strong>Estilo:</strong> contorno (outline), <code>stroke-width="2"</code>, pontas e junções arredondadas, <code>fill="none"</code>, viewBox 24×24.</li>
+        <li><strong>Cor:</strong> <code>stroke="currentColor"</code>, o ícone herda a cor do texto e inverte sozinho entre fundo claro e escuro. Nunca colorir.</li>
+        <li><strong>Tamanho:</strong> 16px dentro de texto e listas, 20px em card e botão, 24px em destaque. A área de toque, quando o ícone clica, tem pelo menos 44px.</li>
+      </ul>
+    </div>
+
+    <h4 style="margin:2rem 0 0.6rem; font-size:0.85rem;">Redes sociais (logos de marca)</h4>
+    <p style="font-size:0.85rem;">O Lucide não tem logos de marca, então as redes sociais usam um conjunto próprio, no mesmo estilo de contorno. São 8, com as 4 do rodapé já em uso.</p>
+    <div class="icon-grid">
+      <button class="icon-tile" type="button" onclick="copyIcon(this)"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" /><path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" /></svg><span class="icon-tile__name">WhatsApp</span><span class="icon-tile__tag">em uso</span></button>
+      <button class="icon-tile" type="button" onclick="copyIcon(this)"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 3a5 5 0 0 1 5 5v8a5 5 0 0 1 -5 5h-12a5 5 0 0 1 -5 -5v-8a5 5 0 0 1 5 -5zm-9 6v6a1 1 0 0 0 1.514 .857l5 -3a1 1 0 0 0 0 -1.714l-5 -3a1 1 0 0 0 -1.514 .857z" /></svg><span class="icon-tile__name">YouTube</span><span class="icon-tile__tag">em uso</span></button>
+      <button class="icon-tile" type="button" onclick="copyIcon(this)"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" /><path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" /><path d="M16.5 7.5l0 .01" /></svg><span class="icon-tile__name">Instagram</span><span class="icon-tile__tag">em uso</span></button>
+      <button class="icon-tile" type="button" onclick="copyIcon(this)"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16.083 2h-4.083a1 1 0 0 0 -1 1v11.5a1.5 1.5 0 1 1 -2.519 -1.1l.12 -.1a1 1 0 0 0 .399 -.8v-4.326a1 1 0 0 0 -1.23 -.974a7.5 7.5 0 0 0 1.73 14.8l.243 -.005a7.5 7.5 0 0 0 7.257 -7.495v-2.7l.311 .153c1.122 .53 2.333 .868 3.59 .993a1 1 0 0 0 1.099 -.996v-4.033a1 1 0 0 0 -.834 -.986a5.005 5.005 0 0 1 -4.097 -4.096a1 1 0 0 0 -.986 -.835z" /></svg><span class="icon-tile__name">TikTok</span><span class="icon-tile__tag">em uso</span></button>
+      <button class="icon-tile" type="button" onclick="copyIcon(this)"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2a1 1 0 0 1 .993 .883l.007 .117v4a1 1 0 0 1 -.883 .993l-.117 .007h-3v1h3a1 1 0 0 1 .991 1.131l-.02 .112l-1 4a1 1 0 0 1 -.858 .75l-.113 .007h-2v6a1 1 0 0 1 -.883 .993l-.117 .007h-4a1 1 0 0 1 -.993 -.883l-.007 -.117v-6h-2a1 1 0 0 1 -.993 -.883l-.007 -.117v-4a1 1 0 0 1 .883 -.993l.117 -.007h2v-1a6 6 0 0 1 5.775 -5.996l.225 -.004h3z" /></svg><span class="icon-tile__name">Facebook</span><span class="icon-tile__tag">disponível</span></button>
+      <button class="icon-tile" type="button" onclick="copyIcon(this)"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 10l-4 4l6 6l4 -16l-18 7l4 2l2 6l3 -4" /></svg><span class="icon-tile__name">Telegram</span><span class="icon-tile__tag">disponível</span></button>
+      <button class="icon-tile" type="button" onclick="copyIcon(this)"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" /><path d="M8 11l0 5" /><path d="M8 8l0 .01" /><path d="M12 16l0 -5" /><path d="M16 16v-3a2 2 0 0 0 -4 0" /></svg><span class="icon-tile__name">LinkedIn</span><span class="icon-tile__tag">disponível</span></button>
+      <button class="icon-tile" type="button" onclick="copyIcon(this)"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 20l4 -9" /><path d="M10.7 14c.437 1.263 1.43 2 2.55 2c2.071 0 3.75 -1.554 3.75 -4a5 5 0 1 0 -9.7 1.7" /><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /></svg><span class="icon-tile__name">Pinterest</span><span class="icon-tile__tag">disponível</span></button>
+    </div>
+    <div class="rules-card">
+      <h4 style="margin:0 0 0.8rem; font-size:0.85rem;">Regras dos ícones de redes sociais</h4>
+      <ul>
+        <li><strong>Só esse conjunto</strong> pra logo de rede social. Nunca baixar o logo oficial colorido da rede, nunca emoji.</li>
+        <li><strong>Estilo:</strong> contorno com <code>stroke-width="1.5"</code> (mais fino que o Lucide, porque o desenho da marca é mais cheio), <code>fill="none"</code>, viewBox 24×24.</li>
+        <li><strong>Cor:</strong> <code>stroke="currentColor"</code>, inverte entre fundo claro e escuro como o resto. Nunca usar a cor da marca da rede.</li>
+        <li><strong>Tamanho e toque:</strong> 24px no desenho, com área de toque de pelo menos 44px. Rede que não está na lista entra no mesmo estilo (contorno 1,5) e é adicionada aqui.</li>
       </ul>
     </div>
   </section>
@@ -3507,6 +3568,7 @@
       <li><span class="box"></span>Vidro fosco só onde faz sentido (botão, card, selo) — não em logo/marca</li>
       <li><span class="box"></span>Site: fontes seguem a escala por dispositivo (celular, tablet, desktop) e o corpo nunca fica abaixo de 16px no celular</li>
       <li><span class="box"></span>Site: margem lateral 20/30/40px e container de no máximo 1200px, sem rolagem lateral em 375, 768, 1024 e 1440px</li>
+      <li><span class="box"></span>Ícones de interface são Lucide e logos de rede social são do conjunto da seção Logos &gt; Ícones, sempre com <code>currentColor</code>, nunca emoji nem logo colorido</li>
       <li><span class="box"></span>Site: alvos de toque de pelo menos 44px e campos de formulário com 48px de altura e fonte de 16px ou mais</li>
     </ul>
   </section>
@@ -3537,6 +3599,19 @@ function copyTokens(btn) {
   }
   try {
     navigator.clipboard.writeText(text).then(function(){ done(true); }, function(){ done(false); });
+  } catch (e) { done(false); }
+}
+
+function copyIcon(tile) {
+  var svg = tile.querySelector('svg').outerHTML;
+  var name = tile.querySelector('.icon-tile__name');
+  var original = name.textContent;
+  function done(ok) {
+    name.textContent = ok ? 'copiado!' : 'selecione manualmente';
+    setTimeout(function(){ name.textContent = original; }, 1500);
+  }
+  try {
+    navigator.clipboard.writeText(svg).then(function(){ done(true); }, function(){ done(false); });
   } catch (e) { done(false); }
 }
 </script>
