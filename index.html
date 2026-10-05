@@ -1529,6 +1529,10 @@
   <section id="sites">
     <div class="sec-head"><h2 class="sec-title">Sites</h2><span class="sec-index">06</span></div>
 
+    <details class="category-toggle">
+      <summary>Estrutura de seções (alternância, placa de vidro e fundo)</summary>
+      <div class="category-toggle__body">
+
     <h3 class="sub-title">Alternância de seções</h3>
     <p style="font-size:0.9rem;">As seções do site <strong>sempre alternam</strong> entre os dois fundos chapados da base — nunca um fundo colorido, nunca um gradiente, nunca um tom intermediário de cinza como fundo de seção inteira.</p>
     <div style="border:1px solid var(--border); border-radius:12px; overflow:hidden; margin-bottom:0.75rem;">
@@ -1537,13 +1541,9 @@
       <div style="background:#fafafa; color:#0a0a0a; padding:1.5rem; text-align:center; font-family:var(--font-mono); font-size:0.85rem; border-top:1px solid var(--border);">#FAFAFA — seção clara</div>
     </div>
     <div class="note-flag">Uma seção nunca repete o fundo da seção imediatamente anterior — é essa troca constante que dá o ritmo da página, não a cor. Título/texto sempre trocam de cor junto (<code>--gray-800</code> sobre claro, <code>--gray-100</code> sobre escuro), nunca ficam com baixo contraste pra "suavizar" a transição.</div>
-    <div class="note-flag"><strong>Padrão dos sites:</strong> as seções são montadas sobre a <strong>Placa de vidro</strong> (recolhível logo abaixo). Nas placas retas de baixo, o fundo pode ser estático, vidro ou textura, e o tom base continua sendo um dos dois chapados.</div>
+    <div class="note-flag"><strong>Padrão dos sites:</strong> as seções são montadas sobre a <strong>Placa de vidro</strong> (logo abaixo, neste mesmo recolhível). Nas placas retas de baixo, o fundo pode ser estático, vidro ou textura, e o tom base continua sendo um dos dois chapados.</div>
 
-    <details class="category-toggle">
-      <summary>Placa de vidro e fundo de seção (padrão dos sites)</summary>
-      <div class="category-toggle__body">
-
-    <h3 class="sub-title" style="margin-top:0;">Placa de vidro (padrão dos sites)</h3>
+    <h3 class="sub-title" style="margin-top:2.5rem;">Placa de vidro (padrão dos sites)</h3>
     <p style="font-size:0.85rem;"><strong>É o padrão de todas as páginas de site.</strong> Cada seção vira uma <strong>placa de vidro fosco</strong> de lado a lado (sem margem/borda lateral). Só um dos dois tons arredonda em cada emenda — esse é o que "vence" e sobrepõe o outro, que fica reto ali. O outro tom nunca arredonda na emenda, senão forma aquele buraco de duas curvas se encontrando. Hero e Rodapé são sempre retos no lado que não tem vizinho, e a quantidade de seções não é fixa. A placa que sobrepõe (a arredondada) é sempre o vidro; as placas retas de baixo usam um dos <strong>fundos de seção</strong> logo abaixo (estático, vidro ou textura).</p>
     <details class="model-toggle">
       <summary><span class="model-thumb"><span></span><span></span></span> Versão clara (placas claras sobrepõem)</summary>
