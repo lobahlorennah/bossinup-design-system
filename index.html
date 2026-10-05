@@ -562,17 +562,17 @@
   .card3d-bg--dark { background: #000000; }
   .card3d { position: relative; border-radius: 20px; padding: 30px; }
   .card3d--light {
-    background: linear-gradient(160deg, #a5a5a5 0%, rgba(165,165,165,.6) 100%);
+    background: linear-gradient(160deg, rgba(255,255,255,.92) 0%, rgba(255,255,255,.5) 100%);
     border: 1px solid transparent;
     box-shadow: 0 16px 32px rgba(0,0,0,.18), 0 3px 6px rgba(0,0,0,.12), inset 0 2px 1px #fff, inset 2px 0 2px rgba(255,255,255,.55), inset 0 -3px 6px rgba(10,10,10,.07), inset 0 -20px 30px rgba(10,10,10,.04);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     color: #0a0a0a;
   }
-  /* Borda em degradê (clara no topo/esquerda, escura embaixo/direita): é o que dá o volume do vidro sobre fundo claro */
+  /* Borda em degradê cinza (#a5a5a5, forte no topo/esquerda e mais suave embaixo/direita), igual à lógica do card escuro: só a borda, o corpo continua claro */
   .card3d--light::before {
     content: ""; position: absolute; inset: -1px; padding: 1px; border-radius: inherit; pointer-events: none;
-    background: linear-gradient(155deg, #ffffff 0%, rgba(255,255,255,.9) 30%, rgba(10,10,10,.14) 62%, rgba(10,10,10,.34) 100%);
+    background: linear-gradient(155deg, #a5a5a5 0%, rgba(165,165,165,.9) 35%, rgba(165,165,165,.55) 100%);
     -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
     -webkit-mask-composite: xor; mask-composite: exclude;
   }
@@ -606,7 +606,7 @@
   .card3d--light .card3d__title { color: #0a0a0a; }
   .card3d--dark .card3d__title { color: #fafafa; }
   .card3d__body { font-size: 0.85rem; line-height: 1.6; margin: 0; }
-  .card3d--light .card3d__body { color: #363534; }
+  .card3d--light .card3d__body { color: #595959; }
   .card3d--dark .card3d__body { color: #f2f2f2; }
 
   /* Preços/planos — mesma superfície de vidro do Card 3D */
