@@ -352,7 +352,7 @@
   .category-toggle__body { padding: 1.5rem 1.1rem; }
   .category-toggle__body h3.sub-title:first-child { margin-top: 0; }
 
-  /* FAQ — accordion em vidro fosco, mesma superfície do Card 3D */
+  /* FAQ — accordion em vidro fosco, mesma superfície do Card de vidro */
   .faq { display: flex; flex-direction: column; gap: 0.85rem; }
   .faq-item { border-radius: 16px; overflow: hidden; }
   .faq-item--light {
@@ -554,7 +554,7 @@
   .headc__strip { display: flex; gap: 0.6rem; justify-content: center; padding: 1.5rem 1rem; overflow-x: auto; }
   .headc__thumb { width: 52px; height: 68px; border: 1px solid currentColor; opacity: 0.55; flex-shrink: 0; }
 
-  /* Card 3D — ícone + título + texto, sombra assumida (regra oficial de Cards) */
+  /* Card de vidro — ícone + título + texto (vidro fosco, volume só na borda interna) */
   .card3d-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-bottom: 0.75rem; }
   @media (max-width: 700px) { .card3d-grid { grid-template-columns: 1fr; } }
   .card3d-bg { border-radius: 12px; padding: 1.5rem; }
@@ -610,7 +610,7 @@
   .card3d--light .card3d__body { color: #595959; }
   .card3d--dark .card3d__body { color: #f2f2f2; }
 
-  /* Preços/planos — mesma superfície de vidro do Card 3D */
+  /* Preços/planos — mesma superfície de vidro do Card de vidro */
   .price-section-head { text-align: center; margin-bottom: 1.5rem; }
   .price-section-head h4 { font-family: var(--font-display); font-weight: 600; font-size: 1.6rem; margin: 0 0 0.5rem; }
   .price-section-head h4 em { font-style: italic; }
@@ -928,7 +928,7 @@
   .glassplate { position: relative; z-index: 1; padding: 2.5rem 1.5rem; text-align: center; font-size: 0.8rem; font-weight: 600; backdrop-filter: blur(26px); -webkit-backdrop-filter: blur(26px); }
   .glassplate--light { background: rgba(250,250,250,.85); color: #0a0a0a; --plate-border: rgba(10,10,10,.2); --plate-drop: rgba(0,0,0,.2); --plate-glow: 0 0 0 rgba(0,0,0,0); --plate-hl: inset 0 1px 0 #fff, inset 0 -1px 0 rgba(255,255,255,.7); }
   .glassplate--dark { background: rgba(10,10,10,.85); color: #fafafa; --plate-border: rgba(255,255,255,.3); --plate-drop: rgba(0,0,0,.5); --plate-glow: 0 0 50px rgba(255,255,255,.08); --plate-hl: inset 0 1px 0 rgba(255,255,255,.35), inset 0 -1px 0 rgba(255,255,255,.18); }
-  /* Borda e luz só na curva (sem linha lateral): o fio acompanha o arredondado e some nas pontas, igual ao Card 3D */
+  /* Borda e luz só na curva (sem linha lateral): o fio acompanha o arredondado e some nas pontas, igual ao Card de vidro */
   .glassplate--round-bottom { border-radius: 0 0 28px 28px; z-index: 2; margin-bottom: -28px; border-bottom: 1px solid var(--plate-border); box-shadow: 0 10px 24px var(--plate-drop), var(--plate-glow), var(--plate-hl); }
   .glassplate--round-both { border-radius: 28px; z-index: 2; margin-top: -28px; margin-bottom: -28px; border-top: 1px solid var(--plate-border); border-bottom: 1px solid var(--plate-border); box-shadow: 0 0 26px var(--plate-drop), var(--plate-glow), var(--plate-hl); }
   .glassplate--round-top { border-radius: 28px 28px 0 0; z-index: 2; margin-top: -28px; border-top: 1px solid var(--plate-border); box-shadow: 0 -10px 24px var(--plate-drop), var(--plate-glow), var(--plate-hl); }
@@ -1572,7 +1572,7 @@
           <div class="glassplate glassplate--light glassplate--flat">Seção 6 (clara, reta)</div>
           <div class="glassplate glassplate--dark glassplate--round-top">Rodapé — reto embaixo (escura)</div>
         </div>
-        <div class="note-flag">Exatamente o espelho da versão clara: mesmos tons, mesma sobreposição, só invertendo qual lado arredonda — aqui o Hero já começa escuro. Essa versão tem uma seção a mais de propósito: a quantidade de seções <strong>não é fixa</strong>, a página pode ter quantas precisar, sempre alternando. <strong>Validado:</strong> a placa de vidro é a direção pra costura/fundo. <strong>Acabamento da borda:</strong> as placas que sobrepõem têm um fio de 1px só na curva (sem linha lateral) que some nas pontas, brilho interno no topo e sombra projetada na placa vizinha, o mesmo acabamento do Card 3D. Placa clara: fio escuro a 20% e brilho branco. Placa escura: fio branco a 30% e leve halo.</div>
+        <div class="note-flag">Exatamente o espelho da versão clara: mesmos tons, mesma sobreposição, só invertendo qual lado arredonda — aqui o Hero já começa escuro. Essa versão tem uma seção a mais de propósito: a quantidade de seções <strong>não é fixa</strong>, a página pode ter quantas precisar, sempre alternando. <strong>Validado:</strong> a placa de vidro é a direção pra costura/fundo. <strong>Acabamento da borda:</strong> as placas que sobrepõem têm um fio de 1px só na curva (sem linha lateral) que some nas pontas, brilho interno no topo e sombra projetada na placa vizinha, o mesmo acabamento do Card de vidro. Placa clara: fio escuro a 20% e brilho branco. Placa escura: fio branco a 30% e leve halo.</div>
       </div>
     </details>
 
@@ -1694,7 +1694,7 @@
     </details>
 
     <h3 class="sub-title" style="margin-top:2.5rem;">Tipos de página</h3>
-    <p style="font-size:0.9rem;">O hero e a estrutura mudam de um tipo de página pro outro — o que se repete entre eles são só as peças já catalogadas (botão, card 3D, formatos de preço, rodapé).</p>
+    <p style="font-size:0.9rem;">O hero e a estrutura mudam de um tipo de página pro outro — o que se repete entre eles são só as peças já catalogadas (botão, card de vidro, formatos de preço, rodapé).</p>
 
     <details class="page-type-toggle">
       <summary><span class="page-type-toggle__label"><span class="page-type-toggle__index">01</span><span class="page-type-toggle__title">Página de Vendas</span></span></summary>
@@ -1928,10 +1928,10 @@
     </details>
 
     <details class="category-toggle">
-      <summary>Card 3D</summary>
+      <summary>Card de vidro</summary>
       <div class="category-toggle__body">
 
-    <h3 class="sub-title" style="margin-top:0;">Card 3D (ícone + título + texto)</h3>
+    <h3 class="sub-title" style="margin-top:0;">Card de vidro (ícone + título + texto)</h3>
     <p style="font-size:0.85rem;">O card é de <strong>vidro fosco</strong> (fundo translúcido + blur), raio 20px, padding 30px (20px no celular). O "3D" é só a <strong>borda interna</strong>: um fio na borda e um halo curto que desbota pra dentro, sem sombra pesada nem relevo. Card escuro: fio branco a 30%. Card claro: fundo <code>#FAFAFA</code> translúcido e borda <code>#A5A5A5</code> em degradê. Badge do ícone sempre em <strong>preto e branco</strong> (nunca cor) — inverte junto com o card: preto sobre card claro, off-white sobre card escuro.</p>
     <details class="model-toggle">
       <summary><span class="model-thumb"><span></span><span></span></span> Modelos (claro e escuro)</summary>
@@ -1985,7 +1985,7 @@
       <summary>Depoimentos</summary>
       <div class="category-toggle__body">
 
-    <p style="font-size:0.85rem;">Dois blocos: 3 cards de depoimento em destaque (citação + nome + contexto), e uma vitrine de "prova social real" — prints genéricos de mensagens/comentários, sempre em PB, sem emoji. Mesma superfície de vidro do Card 3D.</p>
+    <p style="font-size:0.85rem;">Dois blocos: 3 cards de depoimento em destaque (citação + nome + contexto), e uma vitrine de "prova social real" — prints genéricos de mensagens/comentários, sempre em PB, sem emoji. Mesma superfície de vidro do Card de vidro.</p>
     <details class="model-toggle">
       <summary><span class="model-thumb"><span></span><span></span></span> Modelos (claro e escuro)</summary>
       <div class="model-toggle__body">
@@ -2079,7 +2079,7 @@
       <div class="category-toggle__body">
 
     <h3 class="sub-title" style="margin-top:0;">Preços — Formato Curto (oferta única)</h3>
-    <p style="font-size:0.85rem;">Bloco compacto pra uma única oferta: kicker + assinatura em script + nome do produto + preço + CTA + confiança. Vidro fosco, mesma superfície do Card 3D.</p>
+    <p style="font-size:0.85rem;">Bloco compacto pra uma única oferta: kicker + assinatura em script + nome do produto + preço + CTA + confiança. Vidro fosco, mesma superfície do Card de vidro.</p>
     <details class="model-toggle">
       <summary><span class="model-thumb"><span></span><span></span></span> Modelos (claro e escuro)</summary>
       <div class="model-toggle__body">
@@ -2310,7 +2310,7 @@
       <summary>FAQ</summary>
       <div class="category-toggle__body">
 
-    <p style="font-size:0.85rem;">Accordion em vidro fosco — mesma superfície do Card 3D. Ícone de seta (chevron), não +/−, pra manter o mesmo idioma visual já usado nos recolhíveis deste design system. Uma pergunta pode ficar aberta por padrão pra sinalizar que é interativo.</p>
+    <p style="font-size:0.85rem;">Accordion em vidro fosco — mesma superfície do Card de vidro. Ícone de seta (chevron), não +/−, pra manter o mesmo idioma visual já usado nos recolhíveis deste design system. Uma pergunta pode ficar aberta por padrão pra sinalizar que é interativo.</p>
     <details class="model-toggle">
       <summary><span class="model-thumb"><span></span><span></span></span> Modelos (claro e escuro)</summary>
       <div class="model-toggle__body">
@@ -2516,7 +2516,7 @@
         </div>
         <ol class="recipe-list">
           <li><strong>Hero</strong> (promessa principal) <span class="recipe-tag">catalogado</span></li>
-          <li>Pra quem é / Benefícios <span class="recipe-tag">Card 3D</span></li>
+          <li>Pra quem é / Benefícios <span class="recipe-tag">Card de vidro</span></li>
           <li>Preço + CTA <span class="recipe-tag">Preços</span></li>
           <li>Garantia <span class="recipe-tag">Garantia</span></li>
         </ol>
@@ -2806,7 +2806,7 @@
         <dl>
           <dt>Hero</dt><dd>Anatomia obrigatória: nome do produto, headline, subheadline, botão CTA (ver Hero)</dd>
           <dt>Botão</dt><dd>Vidro fosco, 3 cores oficiais (verde, borgonha, marinho)</dd>
-          <dt>Card 3D</dt><dd>Ícone sempre P&B, sombra assumida, vidro fosco</dd>
+          <dt>Card de vidro</dt><dd>Ícone sempre P&B, vidro fosco com borda interna em degradê</dd>
           <dt>Depoimentos</dt><dd>3 cards de citação + prova social em prints genéricos</dd>
           <dt>Preços</dt><dd>Formato Curto, Individual ou Planos, nunca chamar o Individual de "combo"</dd>
           <dt>Garantia</dt><dd>Selo em cera fosca (PB) + título + texto, versão Curta ou Completa conforme o ticket</dd>
