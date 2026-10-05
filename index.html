@@ -562,17 +562,18 @@
   .card3d-bg--dark { background: #000000; }
   .card3d { position: relative; border-radius: 20px; padding: 30px; }
   .card3d--light {
-    background: linear-gradient(160deg, rgba(255,255,255,.92) 0%, rgba(255,255,255,.5) 100%);
+    background: #fafafa;
     border: 1px solid transparent;
-    box-shadow: 0 16px 32px rgba(0,0,0,.18), 0 3px 6px rgba(0,0,0,.12), inset 0 2px 1px #fff, inset 2px 0 2px rgba(255,255,255,.55), inset 0 -3px 6px rgba(10,10,10,.07), inset 0 -20px 30px rgba(10,10,10,.04);
+    /* de fora pra dentro: sombra de apoio, linha branca de brilho colada na borda, depois um halo cinza que desbota pra dentro (é ele que dá o degradê 3D da borda) */
+    box-shadow: 0 16px 32px rgba(0,0,0,.18), 0 3px 6px rgba(0,0,0,.12), inset 0 1px 0 #fff, inset 0 0 9px 0 rgba(165,165,165,.6), inset 4px 5px 9px -3px rgba(165,165,165,.6), inset -2px -5px 10px -4px rgba(165,165,165,.4);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     color: #0a0a0a;
   }
-  /* Borda em degradê cinza (#a5a5a5, forte no topo/esquerda e mais suave embaixo/direita), igual à lógica do card escuro: só a borda, o corpo continua claro */
+  /* Fio externo #a5a5a5 (forte no topo/esquerda, mais suave embaixo/direita). O degradê para dentro vem dos box-shadow inset acima. */
   .card3d--light::before {
     content: ""; position: absolute; inset: -1px; padding: 1px; border-radius: inherit; pointer-events: none;
-    background: linear-gradient(155deg, #a5a5a5 0%, rgba(165,165,165,.9) 35%, rgba(165,165,165,.55) 100%);
+    background: linear-gradient(155deg, #a5a5a5 0%, #a5a5a5 40%, rgba(165,165,165,.5) 100%);
     -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
     -webkit-mask-composite: xor; mask-composite: exclude;
   }
